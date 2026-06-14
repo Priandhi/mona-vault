@@ -1,6 +1,18 @@
 module.exports = {
   apps: [
     {
+      name: "mona-bot-gateway",
+      script: "/home/ubuntu/.local/bin/hermes",
+      args: "gateway run --profile mona-bot",
+      cwd: "/home/ubuntu/.hermes",
+      interpreter: "none",
+      autorestart: true,
+      max_restarts: 5,
+      env: {
+        HERMES_HOME: "/home/ubuntu/.hermes"
+      }
+    },
+    {
       name: "yuna-gateway",
       script: "/home/ubuntu/.local/bin/hermes",
       args: "gateway run --profile yuna",

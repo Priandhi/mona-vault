@@ -22,3 +22,4 @@
 - [x] [MONA] 5-agent system setup (YUNA/SOYU/YERIN/HAERI profiles + PM2) — 2026-06-14
 - [x] [MONA] Inject all 4 bot tokens (base64 bypass + PM2 restart) — 2026-06-14
 - [x] [MONA] BOKONG SEMOK group topics + MONA primary admin setup — 2026-06-14
+- [x] [MONA] Bot tokens fix — redaction bypass + .env dedupe — 2026-06-14
