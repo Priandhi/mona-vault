@@ -97,9 +97,28 @@
 - **Tunnel URL** = stored in `/tmp/tunnel-watchdog/urls.json` (watcher notifies on change)
 - **Brand colors:** ICLIX red `#e50914`, bg `#000`
 
+## 📋 KANBAN PROTOCOL
+
+> 5-agent system — MONA (architect/coordinator), YUNA (trading), SOYU (sniper), YERIN (mining), HAERI (airdrop/nft)
+
+### Path Kanban:
+- Master : /home/ubuntu/obsidian-vault/06-KANBAN/master-kanban.md
+- YUNA   : /home/ubuntu/obsidian-vault/06-KANBAN/yuna-trading.md
+- SOYU   : /home/ubuntu/obsidian-vault/06-KANBAN/soyu-sniper.md
+- YERIN  : /home/ubuntu/obsidian-vault/06-KANBAN/yerin-mining.md
+- HAERI  : /home/ubuntu/obsidian-vault/06-KANBAN/haeri-airdrop.md
+
+### Rules:
+- Awal session → baca master-kanban.md
+- Task baru → tambah ke BACKLOG kanban agent + master
+- Task mulai → pindah ke IN PROGRESS
+- Task selesai → pindah ke DONE + tulis receipt
+- Selalu update Last Update date di kanban
+
 ## Reminders for Operator
 
 - Always read vault's `01-DAILY/` and `05-HERMES-OUTPUTS/` at session start if file context is needed
 - Receipts are not optional — every task gets a receipt
 - Wallet secrets stay in `04-WALLET/` (git-ignored) — never in receipts
 - When in doubt, write to `00-INBOX/` first, process later
+- Kanban updated on every task transition (BACKLOG → IN PROGRESS → DONE)
