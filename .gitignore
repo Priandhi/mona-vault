@@ -1,0 +1,13 @@
+# 04-WALLET/ — NEVET push. Contains sensitive data (addresses, secrets, keypair refs).
+04-WALLET/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.obsidian/workspace.json
+.obsidian/cache/
+
+# Trashed vault artifacts
+*.swp
+*.swo
+*~
