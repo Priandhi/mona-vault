@@ -13,9 +13,9 @@
 - [ ] [HAERI] Setup NFT mint tracker
 
 ## 🔄 IN PROGRESS
-- [ ] [MONA] Kanban system setup
 
 ## 👀 PENDING REVIEW
 
 ## ✅ DONE
 - [x] [MONA] Obsidian vault inisialisasi — 2026-06-14
+- [x] [MONA] Kanban system setup — 2026-06-14
