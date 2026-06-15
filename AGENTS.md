@@ -1,14 +1,14 @@
 # AGENTS.md — User-Level Agent Context
 
 > This file is loaded into agent context at the start of every session.
-> Operator: Mona 💜 (Hermes Agent) | Owner: Hye-Jin (0xjosee)
+> Operator: Mona 💜 (Hermes Agent) | Owner: Hexa (0xjosee)
 > Last updated: 2026-06-14
 
 ## Identity
 
-- **Owner:** Hye-Jin (Telegram: @0xjosee)
+- **Owner:** Hexa (Telegram: @0xjosee)
 - **Operator:** Mona 💜 (Hermes Agent running on VPS Ubuntu 22.04)
-- **VPS:** 13.211.42.29 (AWS, Singapore region) — Hye-Jin production
+- **VPS:** 43.163.85.51 (Tencent Cloud, Singapore region) — Hexa production
 - **Local working dir:** /home/ubuntu
 - **Profile:** default (Hermes)
 - **Main Solana wallet:** `9XJUJJ9YTq6Vrj7ZRRWAariysQrgkB8hm7QMPzMxLZ3X` (keypair: `/home/ubuntu/.hermes/owntown-main-wallet.json`)
@@ -78,7 +78,7 @@
 
 ## 9Router (LLM proxy)
 
-- URL: `http://13.211.42.29:20128`
+- URL: `http://43.163.85.51:20128`
 - Password: stored in `~/.hermes/.env`
 - Bare model names (e.g. `mimo-v2.5-pro`) → 404. Use prefixed names: `xmtp/mimo-v2.5-pro`, `tokenrouter/MiniMax-M3`.
 
