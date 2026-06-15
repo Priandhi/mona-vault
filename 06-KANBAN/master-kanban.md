@@ -27,4 +27,5 @@
 - [x] [MONA] Meridian bot → M3 via 9Router setup — 2026-06-15
 - [x] [MONA] ICLIX add FolaPlay + MaxStream TV streaming sources — 2026-06-15
 - [x] [MONA] ICLIX Live TV frontend integrate FolaPlay (dynamic + new-tab player) — 2026-06-15
-- [x] [MONA] ICLIX embed FolaPlay IN-ICLIX via reverse proxy (no more new tab) — 2026-06-15
+- [x] [MONA] Embed FolaPlay IN-ICLIX via reverse proxy (no more new tab) — 2026-06-15
+- [x] [MONA] Remove FolaPlay integration (user: "stopp ribet hapus folaplay semua") — 2026-06-15
