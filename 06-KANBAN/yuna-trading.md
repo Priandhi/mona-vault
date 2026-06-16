@@ -1,6 +1,6 @@
 # 💹 YUNA — The Strategist
 # Trading & LP Operations Board
-> Last Update: 2026-06-16
+> Last Update: 2026-06-16 23:00
 > **Focus:** Improve Dozero.X WR di testnet selama 1 bulan
 > **Exit criteria:** WR stabil >60% + max DD <10% → lanjut mainnet
 
@@ -29,6 +29,9 @@
   - Realized: -$65.92 (winners covered half the losses)
   - Cron job: `f4fc8ce3a405` yuna-soft-stop (every 5 min, -5% threshold)
   - Clean slate for Dozero scanner to resume with proper SL/TP placement
+- [x] **Dozero.X PnL Script Bug Fix** — agent_data.py get_balance() returned float, script tried `.get('availableBalance')` on float → balance=0 ✅ (2026-06-16)
+  - Fix: cast to float directly + safer except
+  - Soft-stop cron path fix: file landed nested under $HOME yuna, moved to /home/ubuntu/.hermes/profiles/yuna/scripts/
 
 ## 🎯 1-Month Testnet Plan
 
