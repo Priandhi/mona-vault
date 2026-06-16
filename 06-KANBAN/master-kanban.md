@@ -1,6 +1,6 @@
 # 🎯 MASTER KANBAN — COMMAND CENTER
-> Dikelola oleh MONA — The Architect
-| Last Update: 2026-06-15 (CTF attack launched)
+> MONA SQUAD: 5-Agent System — YUNA 💹 | SOYU 🎯 | YERIN ⛏️ | HAERI 🍀
+> Last Update: 2026-06-16
 
 ## 📋 BACKLOG
 - [ ] [YUNA] Setup Meridian LP monitoring
@@ -13,15 +13,12 @@
 - [ ] [HAERI] Setup NFT mint tracker
 
 ## 🔄 IN PROGRESS
-- [ ] **[MONA] OWASP FinBot CTF — full team attack** (2026-06-15)
-  - Session: user_M607z5AXGQZsyr3W, vendor 4042 (MonaBot Industries), 19 challenges 4250pts
-  - YUNA: 4 (recon×2 + labs_guardrail×2) = 500pts
-  - SOYU: 4 (data_exfil×4) = 1400pts 🔥
-  - YERIN: 3 (rce×2 + scorched-earth) = 750pts
-  - HAERI: 8 (policy_bypass×7 + vendor_vendetta) = 1500pts
-  - Skill: `/home/ubuntu/.hermes/profiles/mona-bot/skills/hermes/owasp-finbot-ctf/`
-  - YAMLs: `/tmp/finbot_yamls/`, Detectors: `/tmp/finbot_detectors/`
-  - Helper: `/tmp/finbot_session.sh`
+- [ ] **[MONA] Auto-Heal System** — 10m check + restart otomatis ✅ (2026-06-15)
+- [ ] **Multi-Agent Squad** — Full Integration
+  - ✅ Message system (inbox/outbox antar agent)
+  - ✅ Orchestrator cron (setiap 5 menit)
+  - ✅ Auto-Heal (setiap 10 menit)
+  - ⏳ Cross-agent rule engine (YUNA↔SOYU↔YERIN↔HAERI)
 
 ## 👀 PENDING REVIEW
 
