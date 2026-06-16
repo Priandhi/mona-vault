@@ -25,6 +25,10 @@
 - [x] **Dozero.X Connection** — Testnet API + Binance mainnet API ✅ (2026-06-15)
 - [x] **BANK/INX/AR Post-mortem** — Closed manually, identified SL/TP failure root cause ✅ (2026-06-16)
 - [x] **Dozero.X Risk Filter Overhaul** — Settings + risk + executor rewritten ✅ (2026-06-16)
+- [x] **Dozero.X SL/TP Fix** — Closed all 9 positions, installed soft-stop cron monitor ✅ (2026-06-16)
+  - Realized: -$65.92 (winners covered half the losses)
+  - Cron job: `f4fc8ce3a405` yuna-soft-stop (every 5 min, -5% threshold)
+  - Clean slate for Dozero scanner to resume with proper SL/TP placement
 
 ## 🎯 1-Month Testnet Plan
 
