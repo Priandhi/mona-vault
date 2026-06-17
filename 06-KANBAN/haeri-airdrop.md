@@ -1,6 +1,6 @@
 # 🍀 HAERI — The Collector
 # Airdrop & NFT Operations Board
-> Last Update: 2026-06-15 (Multi-Agent Connected 🧠)
+> Last Update: 2026-06-17 (Airdrop cron paused ⏸️)
 
 ## 📋 BACKLOG
 - [ ] Mapping semua airdrop aktif
@@ -16,3 +16,4 @@
 ## 👀 PENDING REVIEW
 
 ## ✅ DONE
+- [x] **2026-06-17** — Pause 2 cronjob airdrop (scanner + auto-pipeline) — belum ada airdrop bagus, scanner juga broken (ImportError now_wib). Backup: `/tmp/crontab.backup-20260617-160907.txt`
