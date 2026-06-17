@@ -1,6 +1,6 @@
 # 💹 YUNA — The Strategist
 # Trading & LP Operations Board
-> Last Update: 2026-06-17 09:39
+> Last Update: 2026-06-17 16:14
 > **Focus:** Improve Dozero.X WR di testnet selama 1 bulan
 > **Exit criteria:** WR stabil >60% + max DD <10% → lanjut mainnet
 
@@ -12,9 +12,11 @@
 - [ ] Setup PnL tracker harian
 
 ## 🔄 IN PROGRESS
-- [ ] **Dozero.X Risk Filter Overhaul** — Filter baru applied, monitoring WR harian
+- [ ] **Dozero.X Risk Filter Overhaul** — Hexa spec deployed 16:14 (20x lev, $90 margin, 4% SL, R:R TP, liq validation)
   - Target: WR > 55% Week 1, > 60% Week 2-4
   - Current: 48.1% (27 trades hari ini, mostly pre-filter)
+  - **SYNUSDT live trade 16:11** — LONG A/84, 20x, $90 margin, entry $0.054170, SL $0.051940, TP2 $0.058430
+- [ ] **SYNUSDT position monitoring** — waiting for TP2 hit at $0.058430 (8% from entry)
 
 ## 👀 PENDING REVIEW
 - [ ] **Dozero.X SMC Engine** — Kalibrasi threshold & backtest
