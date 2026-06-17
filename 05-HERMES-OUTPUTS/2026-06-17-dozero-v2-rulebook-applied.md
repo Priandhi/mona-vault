@@ -51,10 +51,10 @@
 
 ## Deferred to Separate Project
 **SMC + Order Flow Engine Rewrite** (multi-day project):
-- [ ] Real FVG detection (3-candle pattern) — current has basic FVG, needs virgin verification
-- [ ] BOS/CHOCH detection (vs current basic structure)
-- [ ] IDM (Inducement) — current has liquidity IDM, needs minor-swing focus
-- [ ] Displacement (impulsive candle with imbalance)
+- [ ] Real FVG detection (3-candle pattern)
+- [ ] BOS/CHOCH detection
+- [ ] IDM (Inducement) refinement
+- [ ] Displacement detection
 - [ ] Absorption detection (order flow)
 - [ ] CVD divergence calculation
 - [ ] Premium/Discount zone with Fibonacci 0-100%
@@ -71,9 +71,9 @@
 - New format `send_v2_signal` ready for next signal
 
 ## File Locations
-- Spec PDF: `/home/ubuntu/dozero/docs/RULEBOOK_v2.pdf`
-- Spec MD: `/home/ubuntu/dozero/docs/RULEBOOK_v2.md`
-- Backup pre-upgrade: `/home/ubuntu/dozero.backup-20260617-163021`
+- Spec PDF: /home/ubuntu/dozero/docs/RULEBOOK_v2.pdf
+- Spec MD: /home/ubuntu/dozero/docs/RULEBOOK_v2.md
+- Backup pre-upgrade: /home/ubuntu/dozero.backup-20260617-163021
 - Code changes: settings.py, scoring.py, executor.py, notifier.py
 
 **Posisi:** SYNUSDT LONG + CROSSUSDT LONG (pending)
