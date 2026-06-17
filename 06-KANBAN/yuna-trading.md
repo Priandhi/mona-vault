@@ -1,6 +1,6 @@
 # 💹 YUNA — The Strategist
 # Trading & LP Operations Board
-> Last Update: 2026-06-16 23:00
+> Last Update: 2026-06-17 09:39
 > **Focus:** Improve Dozero.X WR di testnet selama 1 bulan
 > **Exit criteria:** WR stabil >60% + max DD <10% → lanjut mainnet
 
@@ -32,6 +32,12 @@
 - [x] **Dozero.X PnL Script Bug Fix** — agent_data.py get_balance() returned float, script tried `.get('availableBalance')` on float → balance=0 ✅ (2026-06-16)
   - Fix: cast to float directly + safer except
   - Soft-stop cron path fix: file landed nested under $HOME yuna, moved to /home/ubuntu/.hermes/profiles/yuna/scripts/
+- [x] **Dozero.X Scanner Self-Deadlock Fix** — signalled.json + executor bug ✅ (2026-06-17)
+  - Root: 53 pairs stuck in signalled.json (no cleanup after trade close) + max_lev undefined in execute_trade
+  - Fix 1: auto-prune signalled.json at start of each scan (remove pairs with no pos/order)
+  - Fix 2: changed `max_lev` → `leverage` in executor.py:182 (log statement)
+  - Result: HYPEUSDT LONG A/90 limit @ $71.874 placed, EPICUSDT signal also generated
+  - 198 pairs still in 24h strike-cooldown (will unlock gradually)
 
 ## 🎯 1-Month Testnet Plan
 

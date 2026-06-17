@@ -17,14 +17,15 @@
 - [ ] **Multi-Agent Comms** — Terima instruksi dari MONA & agent lain via inbox
 
 ## 👀 PENDING REVIEW
-- [ ] Monitor 24-48 jam: WR improvement + phantom prevention
+- [ ] Monitor FREDDY + JOE (next 60-90m) — verify v3 filter works
+- [ ] If market stays rough, accept 1 trade/day with quality filter
 
 ## ✅ DONE
 - [x] Charon position + PnL snapshot — 2026-06-16
-- [x] Charon fix: config retune + phantom guard + cleanup — 2026-06-16
-  - jupiter-executor.js: reject buy if no quote+no price
-  - position-manager.js: openPosition() guard against phantom
-  - index.js: handle openPosition null return
-  - config.json: BE 3%→15% / 1%→5%, trail 5%→12% / 3%→8%, maxHold 60→120m, deploy 0.2→0.1, maxPos 5→3, maxTrades 99→8, maxLoss 1.0→0.05
-  - Phantom positions cleaned (3→0)
-  - Bot restarted (new PID 2048420)
+- [x] Charon fix v1: config retune + phantom guard + cleanup — 2026-06-16
+- [x] Charon fix v3: DATA-DRIVEN filter overhaul — 2026-06-16
+  - token-filter.js: anti-chase (max 5m +3%), age window (10-120m), maxOrganic 90
+  - config.json: 14 filter values retuned, TP ladder [20/30, 40/35, 70/35], trailing +15%/-10%
+  - deploy 0.05, maxPos 2, maxTrades 5, maxLoss 0.03, pause after 2 losses
+  - **p trade WIN +139.91% / +0.14 SOL** (first winner with new config!)
+  - Bot restarted PID 2322233
