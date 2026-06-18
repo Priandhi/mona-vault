@@ -28,10 +28,32 @@ Netflix-style streaming platform. Movies, TV Series, Anime, Drama Asia, Live TV.
 1. **FolaPlay** (`folaplay.com`) — real-time live sports. Frontend fetches `/api/streaming/list/folaplay` and displays 4 live matches + highlights. **Click opens modal with iframe loading folaplay via `/api/proxy/reverse/<url>` reverse proxy** — user can interact with folaplay's full Vue SPA inside iclix (solve captcha, browse matches, watch player).
 2. **Local HLS** — 24 static Indonesian TV channels (Trans7, Trans TV, MetroTV, etc) + 3 sports (beIN, TVRI). HLS.js in modal.
 
+## IDLIX Design Reference (2026-06-18)
+- Full design specs saved to: `03-RESEARCH/iclix-idlix-design-reference.md`
+- Hero banner: Full HD backdrop, trailer, metadata, action buttons, production logos
+- Episode list: 2-column grid, thumbnail overlays, season selector, sort controls
+- Style specs: Colors, typography, spacing, border-radius
+- Layout diagrams: Hero banner + Episode grid
+- Implementation checklist: 4 phases (Hero, Episodes, Cards, Polish)
+
+## UI/UX Audit (2026-06-18)
+- Full audit saved to: `03-RESEARCH/iclix-ui-ux-audit-2026-06-18.md`
+- P1 bugs: rating 0.0, content duplikat, placeholder kosong
+- P2 design: text kecil, carousel arrows, app "SOON", section headers
+- P3 features: personalisasi, continue watching, hover preview, trailer auto-play, sub indo badge, watchlist button
+
+## Video Resolver Research (2026-06-18)
+- Full research saved to: `03-RESEARCH/iclix-video-resolver-research.md`
+- VidSrc chain scraper: vidsrc.to → vsembed.ru → cloudnestra.com → m3u8
+- Pure HTTP request, no browser needed
+- Sources: NetMirror (Netflix), video-api (all platforms), IDLIX downloader reference
+
 ## Kanban
 - [x] Add FolaPlay + MaxStream TV to ICLIX — 2026-06-15
 - [x] Live TV frontend integration with FolaPlay — 2026-06-15
 - [x] Embed FolaPlay IN-ICLIX via reverse proxy (no more new tab) — 2026-06-15
+- [ ] ICLIX UI/UX overhaul (P1+P2+P3) — Pending (bundle all fixes)
+- [ ] Integrate VidSrc chain scraper — Pending
 - [ ] Fix folaplay highlight image extraction (lazy-load not captured in headless) — TBD
 - [ ] Build m3u8 extractor for in-modal HLS player — TBD
 - [ ] Add more live sources (Vidio free, RCTI+, etc) — TBD
@@ -39,3 +61,5 @@ Netflix-style streaming platform. Movies, TV Series, Anime, Drama Asia, Live TV.
 ## Receipts
 - `05-HERMES-OUTPUTS/2026-06-15-mona-iclix-folaplay-maxstream.md` — backend scrapers
 - `05-HERMES-OUTPUTS/2026-06-15-mona-iclix-livetv-frontend.md` — frontend integration
+- `03-RESEARCH/iclix-ui-ux-audit-2026-06-18.md` — UI/UX audit
+- `03-RESEARCH/iclix-video-resolver-research.md` — Video resolver research

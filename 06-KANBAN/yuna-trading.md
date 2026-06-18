@@ -1,6 +1,6 @@
 # 💹 YUNA — The Strategist
 # Trading & LP Operations Board
-> Last Update: 2026-06-17 16:14
+> Last Update: 2026-06-18 14:45 UTC
 > **Focus:** Improve Dozero.X WR di testnet selama 1 bulan
 > **Exit criteria:** WR stabil >60% + max DD <10% → lanjut mainnet
 
@@ -10,6 +10,7 @@
 - [ ] Per-symbol blacklist (skip pairs WR < 30% setelah 5+ trades)
 - [ ] Backtest filter baru di 7-day historical data
 - [ ] Setup PnL tracker harian
+- [ ] **HEXA input needed:** proxy URL or skip — proxy support ready (PROXY_URL env var)
 
 ## 🔄 IN PROGRESS
 - [ ] **Dozero.X Risk Filter Overhaul** — Hexa spec deployed 16:14 (20x lev, $90 margin, 4% SL, R:R TP, liq validation)
@@ -40,6 +41,13 @@
   - Fix 2: changed `max_lev` → `leverage` in executor.py:182 (log statement)
   - Result: HYPEUSDT LONG A/90 limit @ $71.874 placed, EPICUSDT signal also generated
   - 198 pairs still in 24h strike-cooldown (will unlock gradually)
+- [x] **Proxy Support + Throttle** — Avoid Binance rate limit ban ✅ (2026-06-18)
+  - Root: 5-min IP ban 06:23-06:28 UTC (XPL watch 60 polls/hr + bot cycle bursts)
+  - Fix 1: `PROXY_URL` env var support di `config/connection.py` + `xpl_watch.py`
+  - Fix 2: 50ms throttle between requests (`_throttle()` di connection.py)
+  - Fix 3: PM2 ecosystem updated dengan `PROXY_URL=""` slot, dozero-auto restarted
+  - Test: 10 rapid requests = 811ms (dengan 50ms gap), under Binance 2400 weight/min limit
+  - See: 2026-06-18-proxy-support.md
 
 ## 🎯 1-Month Testnet Plan
 
