@@ -1,76 +1,86 @@
 # 💹 YUNA — The Strategist
 # Trading & LP Operations Board
-> Last Update: 2026-06-18 14:45 UTC
-> **Focus:** Improve Dozero.X WR di testnet selama 1 bulan
+> Last Update: 2026-06-22 11:20 CST
+> **Focus:** PROJECT VIOLET v2 — Smart Money + Order Flow (REPLACED Dozero.X Jun 21)
 > **Exit criteria:** WR stabil >60% + max DD <10% → lanjut mainnet
 
 ## 📋 BACKLOG
-- [ ] Setup WR daily tracker (cron → topic 2893)
+- [ ] Setup WR daily tracker PV (cron → topic 2893)
 - [ ] Setup losing trade analyzer (weekly deep-dive)
 - [ ] Per-symbol blacklist (skip pairs WR < 30% setelah 5+ trades)
-- [ ] Backtest filter baru di 7-day historical data
-- [ ] Setup PnL tracker harian
-- [ ] **HEXA input needed:** proxy URL or skip — proxy support ready (PROXY_URL env var)
+- [ ] Backtest PV di 7-day historical data
+- [ ] Fix OI history API noise (engine/data.py: testnet endpoint returns empty)
+- [ ] Update settings.py BALANCE kalau modal berubah significantly
 
 ## 🔄 IN PROGRESS
-- [ ] **Dozero.X Risk Filter Overhaul** — Hexa spec deployed 16:14 (20x lev, $90 margin, 4% SL, R:R TP, liq validation)
-  - Target: WR > 55% Week 1, > 60% Week 2-4
-  - Current: 48.1% (27 trades hari ini, mostly pre-filter)
-  - **SYNUSDT live trade 16:11** — LONG A/84, 20x, $90 margin, entry $0.054170, SL $0.051940, TP2 $0.058430
-- [ ] **SYNUSDT position monitoring** — waiting for TP2 hit at $0.058430 (8% from entry)
+- **PROJECT VIOLET v2** — DEPLOYED Jun 22 14:30 ✅
+  - PM2 cron_restart firing every 15 min
+  - Cycle 1: 14:29:20, Cycle 2: 14:30:00 (verified)
+  - No signals yet (sideways market, BTC/ETH both 0/9 FAIL)
+  - Baseline WR: 0/0 (awaiting first trade)
 
 ## 👀 PENDING REVIEW
-- [ ] **Dozero.X SMC Engine** — Kalibrasi threshold & backtest
+- (none)
 
 ## ✅ DONE
-- [x] **Dozero.X SMC Bot** — Implementasi SMC trading engine ✅ (2026-06-15)
-- [x] **Dozero.X Cron Jobs** — Scanner 15m + PnL report 4h ✅ (2026-06-15)
-- [x] **Dozero.X Connection** — Testnet API + Binance mainnet API ✅ (2026-06-15)
-- [x] **BANK/INX/AR Post-mortem** — Closed manually, identified SL/TP failure root cause ✅ (2026-06-16)
-- [x] **Dozero.X Risk Filter Overhaul** — Settings + risk + executor rewritten ✅ (2026-06-16)
-- [x] **Dozero.X SL/TP Fix** — Closed all 9 positions, installed soft-stop cron monitor ✅ (2026-06-16)
-  - Realized: -$65.92 (winners covered half the losses)
-  - Cron job: `f4fc8ce3a405` yuna-soft-stop (every 5 min, -5% threshold)
-  - Clean slate for Dozero scanner to resume with proper SL/TP placement
-- [x] **Dozero.X PnL Script Bug Fix** — agent_data.py get_balance() returned float, script tried `.get('availableBalance')` on float → balance=0 ✅ (2026-06-16)
-  - Fix: cast to float directly + safer except
-  - Soft-stop cron path fix: file landed nested under $HOME yuna, moved to /home/ubuntu/.hermes/profiles/yuna/scripts/
-- [x] **Dozero.X Scanner Self-Deadlock Fix** — signalled.json + executor bug ✅ (2026-06-17)
-  - Root: 53 pairs stuck in signalled.json (no cleanup after trade close) + max_lev undefined in execute_trade
-  - Fix 1: auto-prune signalled.json at start of each scan (remove pairs with no pos/order)
-  - Fix 2: changed `max_lev` → `leverage` in executor.py:182 (log statement)
-  - Result: HYPEUSDT LONG A/90 limit @ $71.874 placed, EPICUSDT signal also generated
-  - 198 pairs still in 24h strike-cooldown (will unlock gradually)
-- [x] **Proxy Support + Throttle** — Avoid Binance rate limit ban ✅ (2026-06-18)
-  - Root: 5-min IP ban 06:23-06:28 UTC (XPL watch 60 polls/hr + bot cycle bursts)
-  - Fix 1: `PROXY_URL` env var support di `config/connection.py` + `xpl_watch.py`
-  - Fix 2: 50ms throttle between requests (`_throttle()` di connection.py)
-  - Fix 3: PM2 ecosystem updated dengan `PROXY_URL=""` slot, dozero-auto restarted
-  - Test: 10 rapid requests = 811ms (dengan 50ms gap), under Binance 2400 weight/min limit
-  - See: 2026-06-18-proxy-support.md
+- [x] **Dozero.X → PROJECT VIOLET transition** — Hexa pivot Jun 22 ✅
+  - Dozero archived ke `/home/ubuntu/dozero-backup-20260621_214538/`
+  - PV v2 found di `/home/ubuntu/project-violet/` (built Jun 21 21:50-22:24)
+  - Skill `project-violet-engine` di default profile
+  - See: 2026-06-22-dozero-to-violet-transition.md
+- [x] **PROJECT VIOLET v2 DEPLOY** — Hexa option B (step-by-step) Jun 22 ✅
+  - Step 1: BALANCE 4300 → 4043.49 (API actual)
+  - Step 2: ecosystem.config.json (PM2, cron_restart, autorestart=false)
+  - Step 3: cron job yuna-violet-scan (wrapper script, 15-min interval)
+  - Step 4: test BTCUSDT/ETHUSDT analyze (0/9 FAIL, sideways — correct skip)
+  - Step 5: PM2 started, cron_restart firing 14:30/14:45/15:00/...
+  - See: 2026-06-22-project-violet-deploy.md
+- [x] **TUNING MODE ACTIVATED** — Hexa "testnet = tuning ground" Jun 22 ✅
+  - SCAN_MODE "curated" → "volume" (50 pairs by $10M+ volume)
+  - Scan interval 15min → 5min (more data points)
+  - Log ALL signals/results ke signals.jsonl (for tuning analysis)
+  - Tuning report: daily 23:00 UTC auto + on-demand /tuning
+  - 196 scans in 1h, 100% FAIL (sideways market)
+  - See: 2026-06-22-tuning-mode-report.md
+- [x] **Dozero.X** full history (legacy, archived):
+  - SMC Bot implementation, Cron Jobs, Connection ✅ (2026-06-15)
+  - BANK/INX/AR Post-mortem ✅ (2026-06-16)
+  - Risk Filter Overhaul ✅ (2026-06-16)
+  - SL/TP Fix (-$65.92 realized) ✅ (2026-06-16)
+  - PnL Script Bug Fix ✅ (2026-06-16)
+  - Scanner Self-Deadlock Fix ✅ (2026-06-17)
+  - Proxy Support + 50ms Throttle ✅ (2026-06-18)
 
-## 🎯 1-Month Testnet Plan
+## 🎯 PROJECT VIOLET v2 Spec
 
-### Week 1 (Jun 16-22)
-- Monitor WR dengan filter baru (margin $5, tier leverage, SL 2-8%, price ≥$0.05)
-- Daily report: total trades, WR, PnL, top winners/losers
-- Identify: pairs yang masih lolos filter tapi loss
+### Risk Config (Scalable)
+- BALANCE: $4,300 (config, actual API: $4,043.60)
+- Leverage: 20x
+- Margin/trade: 2.1% balance ($90 @ $4300)
+- SL: 4% (WAJIB validate_leverage_sl)
+- TP: R:R 1:1 (30%) → 1:2 (30%, main) → 1:3 (40%, runner)
+- Min RR: 1.5
+- Max Risk: 2% balance
+- Daily Loss Limit: -3R
+- Max Drawdown: 15% → evaluasi
 
-### Week 2-3 (Jun 23 - Jul 6)
-- Tighten filter kalau WR < 55%: naikkan MIN_SL_DISTANCE_PCT ke 3%, naikkan score threshold ke 80
-- Per-symbol blacklist: pair dengan WR < 30% setelah 5+ trades
-- Backtest filter baru di 7-day data, compare dengan old filter
+### Confluence Scoring
+| Score | Grade | Action |
+|---|---|---|
+| 7-9 | ELITE | Execute — full confidence |
+| 5-6 | GOOD | Execute — std size |
+| 3-4 | WEAK | NO TRADE |
+| <3 | FAIL | NO TRADE (no override) |
 
-### Week 4 (Jul 7-13)
-- Final review: WR, max DD, sharpe ratio
-- Decision gate:
-  - ✅ WR > 60% + DD < 10% + 20+ trades → **LANJUT MAINNET** (request Hexa)
-  - ⚠️ WR 50-60% → iterasi filter, extend 2 minggu
-  - ❌ WR < 50% → fundamental strategy issue, pivot ke different approach
+### Default Symbols
+- BTCUSDT, ETHUSDT
+
+### MTF Alignment
+- Daily → H4 → H1 → M15
 
 ## 📊 Success Metrics
-- **Min trades:** 30+ per minggu (statistical significance)
+- **Min trades:** 30+ per minggu
 - **Win rate:** > 60%
 - **Max drawdown:** < 10% dari balance
-- **Avg win / avg loss:** > 1.5 (reward:risk)
+- **Avg win / avg loss:** > 1.5 (R:R)
 - **Sharpe ratio:** > 1.0

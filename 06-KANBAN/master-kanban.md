@@ -1,6 +1,6 @@
 # 🎯 MASTER KANBAN — COMMAND CENTER
 > MONA SQUAD: 5-Agent System — YUNA 💹 | SOYU 🎯 | YERIN ⛏️ | HAERI 🍀
-> Last Update: 2026-06-20
+> Last Update: 2026-06-23
 
 ## 📋 BACKLOG
 - [ ] [YUNA] Setup Meridian LP monitoring
@@ -14,11 +14,11 @@
 
 ## 🔄 IN PROGRESS
 - [ ] **[MONA] Auto-Heal System** — 10m check + restart otomatis ✅ (2026-06-15)
-- [ ] **Multi-Agent Squad** — Full Integration
-  - ✅ Message system (inbox/outbox antar agent)
-  - ✅ Orchestrator cron (setiap 5 menit)
-  - ✅ Auto-Heal (setiap 10 menit)
-  - ⏳ Cross-agent rule engine (YUNA↔SOYU↔YERIN↔HAERI)
+- [ ] **Multi-Agent Squad** — Simplified to YUNA↔SOYU only
+  - ✅ YUNA: Dozero scanner fresh, cooldown cleared (2026-06-21)
+  - ✅ SOYU: Charon running, orchestrator simplified (2 rules)
+  - ✅ YERIN/HAERI gateway stopped (hemat RAM)
+  - ⏳ SOYU daily report cron (pending)
 
 ## 👀 PENDING REVIEW
 
@@ -36,3 +36,10 @@
 - [x] [MONA] Embed FolaPlay IN-ICLIX via reverse proxy (no more new tab) — 2026-06-15
 - [x] [MONA] Remove FolaPlay integration (user: "stopp ribet hapus folaplay semua") — 2026-06-15
 - [x] [YUNA] Proxy support + 50ms throttle (avoid Binance IP ban) — 2026-06-18
+- [x] [YUNA] Dozero.X → PROJECT VIOLET v2 transition (engine built Jun 21, awaiting deploy) — 2026-06-22
+- [x] [YUNA] PROJECT VIOLET v2 deploy (5 steps) — option B step-by-step — 2026-06-22
+- [x] [YUNA] Tuning mode + daily report (testnet = setting tuning ground) — 2026-06-22
+- [x] [YUNA] Filter relaxation (soft WAJIB + EXECUTE_MIN_SCORE 5→4) — 2026-06-22
+- [x] [YUNA] Order placement fix (precision qty + LIMIT entry + algo SL/TP) — 2026-06-22
+- [x] [YUNA] First live position (LABUSDT LONG, LIMIT filled, SL/TP armed) — 2026-06-22
+- [x] [YUNA] Position cleanup (duplicate algos removed, dedup hardened) — 2026-06-22
