@@ -28,6 +28,20 @@ updated: 2026-06-27
 | [[02-PROJECTS/ctf-commands]] | ✅ Done | |
 | [[02-PROJECTS/ctf-quick-paste]] | ✅ Done | |
 
+## 🔗 Ongoing Responsibilities (AREAS)
+
+| Area | Description |
+| :--- | :--- |
+| [[03-AREAS/learning-skills]] | Learning & skill development (PWN, RE, CTF, Web) |
+| [[03-AREAS/vps-infrastructure]] | VPS health, security, services |
+| [[03-AREAS/iclix-platform]] | ICLIX platform dev & ops |
+
+## 🔗 Related Resources
+
+| Resource | Links To |
+| :--- | :--- |
+| [[09-SYSTEM/mocs/MOC-Research]] | All research & reference materials |
+
 ---
 
 **Dataview query:**

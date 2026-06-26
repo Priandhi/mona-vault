@@ -30,8 +30,10 @@ tags:
 
 ## Resources
 
-- [[04-RESOURCES/ctf-master-cheatsheet]]
-- [[09-SYSTEM/mocs/MOC-Research]]
+- [[09-SYSTEM/mocs/MOC-Research]] — all research
+- [[04-RESOURCES/learning-session-2026-06-22]] — Day 1
+- [[04-RESOURCES/learning-session-2026-06-23]] — Day 2
+- [[04-RESOURCES/learning-reevaluation-2026-06-25]] — Gap fix
 
 ## Routines
 

@@ -33,4 +33,6 @@ tags:
 - Disk usage on VPS
 - Admin dashboard not built yet
 
----
+## 🔗 Related
+- [[09-SYSTEM/mocs/MOC-Projects]] — master project dashboard
+- [[09-SYSTEM/mocs/MOC-Research]] — all research & reference

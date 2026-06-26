@@ -36,11 +36,7 @@ tags:
 - [ ] 🟡 UFW — activate?
 - [ ] 🟡 Disk cleanup (82%)
 
-## Monthly Tasks
-
-- [ ] Check disk usage
-- [ ] Review auth log
-- [ ] Update packages
-- [ ] Clean old /tmp files
+## 🔗 Related
+- [[09-SYSTEM/mocs/MOC-Projects]] — master project dashboard
 
 ---
