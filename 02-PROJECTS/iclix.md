@@ -38,7 +38,7 @@ Netflix-style streaming platform. Movies, TV Series, Anime, Drama Asia, Live TV.
 2. **Local HLS** — 24 static Indonesian TV channels (Trans7, Trans TV, MetroTV, etc) + 3 sports (beIN, TVRI). HLS.js in modal.
 
 ## IDLIX Design Reference (2026-06-18)
-- Full design specs saved to: `03-RESEARCH/iclix-idlix-design-reference.md`
+- Full design specs saved to: `04-RESOURCES/iclix-idlix-design-reference.md`
 - Hero banner: Full HD backdrop, trailer, metadata, action buttons, production logos
 - Episode list: 2-column grid, thumbnail overlays, season selector, sort controls
 - Style specs: Colors, typography, spacing, border-radius
@@ -46,13 +46,13 @@ Netflix-style streaming platform. Movies, TV Series, Anime, Drama Asia, Live TV.
 - Implementation checklist: 4 phases (Hero, Episodes, Cards, Polish)
 
 ## UI/UX Audit (2026-06-18)
-- Full audit saved to: `03-RESEARCH/iclix-ui-ux-audit-2026-06-18.md`
+- Full audit saved to: `04-RESOURCES/iclix-ui-ux-audit-2026-06-18.md`
 - P1 bugs: rating 0.0, content duplikat, placeholder kosong
 - P2 design: text kecil, carousel arrows, app "SOON", section headers
 - P3 features: personalisasi, continue watching, hover preview, trailer auto-play, sub indo badge, watchlist button
 
 ## Video Resolver Research (2026-06-18)
-- Full research saved to: `03-RESEARCH/iclix-video-resolver-research.md`
+- Full research saved to: `04-RESOURCES/iclix-video-resolver-research.md`
 - VidSrc chain scraper: vidsrc.to → vsembed.ru → cloudnestra.com → m3u8
 - Pure HTTP request, no browser needed
 - Sources: NetMirror (Netflix), video-api (all platforms), IDLIX downloader reference
@@ -68,7 +68,7 @@ Netflix-style streaming platform. Movies, TV Series, Anime, Drama Asia, Live TV.
 - [ ] Add more live sources (Vidio free, RCTI+, etc) — TBD
 
 ## Receipts
-- `05-HERMES-OUTPUTS/2026-06-15-mona-iclix-folaplay-maxstream.md` — backend scrapers
-- `05-HERMES-OUTPUTS/2026-06-15-mona-iclix-livetv-frontend.md` — frontend integration
-- `03-RESEARCH/iclix-ui-ux-audit-2026-06-18.md` — UI/UX audit
-- `03-RESEARCH/iclix-video-resolver-research.md` — Video resolver research
+- `06-HERMES-OUTPUTS/2026-06-15-mona-iclix-folaplay-maxstream.md` — backend scrapers
+- `06-HERMES-OUTPUTS/2026-06-15-mona-iclix-livetv-frontend.md` — frontend integration
+- `04-RESOURCES/iclix-ui-ux-audit-2026-06-18.md` — UI/UX audit
+- `04-RESOURCES/iclix-video-resolver-research.md` — Video resolver research
