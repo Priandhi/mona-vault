@@ -1,3 +1,12 @@
+---
+type: project
+status: active
+priority: high
+tags:
+  - project
+  - iclix
+  - streaming
+---
 # ICLIX Project
 
 > **Status:** Active development (2026-06-15)

@@ -1,3 +1,10 @@
+---
+type: resource
+topic: ctf
+tags:
+  - ctf
+  - cheatsheet
+---
 # CTF Master Cheat Sheet — Mona
 
 > Dibuat 2026-06-25, target CTF malam ini.

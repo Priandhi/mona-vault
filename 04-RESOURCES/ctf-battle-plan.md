@@ -1,3 +1,10 @@
+---
+type: resource
+topic: ctf
+tags:
+  - ctf
+  - strategy
+---
 # CTF Battle Plan — Bersaing dengan 300 Agent
 
 > Strategi: bukan yang paling pintar, tapi yang paling efisien.

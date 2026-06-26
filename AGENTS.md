@@ -38,20 +38,24 @@
 ```
 /home/ubuntu/obsidian-vault/
 ├── 00-INBOX/           # Quick ideas, random thoughts (unprocessed)
-├── 01-DAILY/           # One .md per day (YYYY-MM-DD.md)
-├── 02-PROJECTS/        # One .md per active project
-├── 03-RESEARCH/        # Findings, exploit attempts, research results
-├── 04-WALLET/          # ⚠️ SENSITIVE — Git-ignored, never push
-└── 05-HERMES-OUTPUTS/  # Receipts (audit trail) — one per task
+├── 01-DAILY/           # Daily notes (YYYY-MM-DD.md)
+├── 02-PROJECTS/        # Active projects
+├── 03-AREAS/           # Ongoing responsibilities (learning, VPS, ICLIX)
+├── 04-RESOURCES/       # Reference material, research findings, CTF
+├── 05-WALLET/          # ⚠️ SENSITIVE — Git-ignored, never push
+├── 06-HERMES-OUTPUTS/  # Receipts (audit trail) — one per task
+├── 07-KANBAN/          # 5-agent kanban system
+├── 08-ARCHIVE/         # Completed projects, old daily notes
+└── 09-SYSTEM/          # Templates, canvas, MOCs, dataview queries
 ```
 
 ### Awal setiap session:
 - Baca `01-DAILY/` — cari file tanggal terbaru (load context)
 - Baca `02-PROJECTS/` — load semua project yang relevan dengan request user
-- Baca `05-HERMES-OUTPUTS/` — cek receipts terbaru untuk konteks task sebelumnya
+- Baca `06-HERMES-OUTPUTS/` — cek receipts terbaru untuk konteks task sebelumnya
 
 ### Akhir setiap task:
-- Tulis receipt ke `05-HERMES-OUTPUTS/YYYY-MM-DD-[nama-task].md`
+- Tulis receipt ke `06-HERMES-OUTPUTS/YYYY-MM-DD-[nama-task].md`
 - Format receipt WAJIB berisi:
   - **Task:** apa yang dikerjain
   - **Result:** hasil/output
@@ -62,8 +66,8 @@
 ### Aturan tambahan:
 - Ide/catatan cepat → tulis ke `00-INBOX/`
 - Setiap project punya file sendiri di `02-PROJECTS/`
-- Findings/riset → tulis ke `03-RESEARCH/`
-- `04-WALLET/` — **JANGAN PERNAH** di-push ke Git
+- Findings/riset → tulis ke `04-RESOURCES/`
+- `05-WALLET/` — **JANGAN PERNAH** di-push ke Git
 - End of day → update daily note (`01-DAILY/YYYY-MM-DD.md`)
 - After daily note update → `git add -A && git commit -m "vault: YYYY-MM-DD daily"`
 
@@ -102,11 +106,11 @@
 > 5-agent system — MONA (architect/coordinator), YUNA (trading), SOYU (sniper), YERIN (mining), HAERI (airdrop/nft)
 
 ### Path Kanban:
-- Master : /home/ubuntu/obsidian-vault/06-KANBAN/master-kanban.md
-- YUNA   : /home/ubuntu/obsidian-vault/06-KANBAN/yuna-trading.md
-- SOYU   : /home/ubuntu/obsidian-vault/06-KANBAN/soyu-sniper.md
-- YERIN  : /home/ubuntu/obsidian-vault/06-KANBAN/yerin-mining.md
-- HAERI  : /home/ubuntu/obsidian-vault/06-KANBAN/haeri-airdrop.md
+- Master : /home/ubuntu/obsidian-vault/07-KANBAN/master-kanban.md
+- YUNA   : /home/ubuntu/obsidian-vault/07-KANBAN/yuna-trading.md
+- SOYU   : /home/ubuntu/obsidian-vault/07-KANBAN/soyu-sniper.md
+- YERIN  : /home/ubuntu/obsidian-vault/07-KANBAN/yerin-mining.md
+- HAERI  : /home/ubuntu/obsidian-vault/07-KANBAN/haeri-airdrop.md
 
 ### Rules:
 - Awal session → baca master-kanban.md
@@ -117,8 +121,8 @@
 
 ## Reminders for Operator
 
-- Always read vault's `01-DAILY/` and `05-HERMES-OUTPUTS/` at session start if file context is needed
+- Always read vault's `01-DAILY/` and `06-HERMES-OUTPUTS/` at session start if file context is needed
 - Receipts are not optional — every task gets a receipt
-- Wallet secrets stay in `04-WALLET/` (git-ignored) — never in receipts
+- Wallet secrets stay in `05-WALLET/` (git-ignored) — never in receipts
 - When in doubt, write to `00-INBOX/` first, process later
 - Kanban updated on every task transition (BACKLOG → IN PROGRESS → DONE)

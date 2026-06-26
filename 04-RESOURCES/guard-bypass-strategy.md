@@ -1,3 +1,12 @@
+---
+type: resource
+topic: prompt-injection
+source: ABYSS CTF
+tags:
+  - ctf
+  - prompt-injection
+  - guard-bypass
+---
 # Prompt Injection CTF — Guard Bypass Strategies
 
 > Target: Claude Opus as gatekeeper/guard

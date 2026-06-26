@@ -1,3 +1,12 @@
+---
+type: project
+status: active
+priority: medium
+tags:
+  - project
+  - ctf
+  - gandalf
+---
 # 🎮 GANDALF LAKERA.AI — Operation Playbook
 
 **Dispatch:** MONA → All agents (YERIN, YUNA, HAERI, SOYU)

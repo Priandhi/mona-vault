@@ -1,3 +1,11 @@
+---
+type: resource
+topic: ai-security
+tags:
+  - hackagent
+  - ai-security
+  - jailbreak
+---
 # HACKAGENT-AI-SECURITY — GAP CORRECTION
 > 2026-06-25 | Self-corrected from official HackAgent docs
 > docs source: https://raw.githubusercontent.com/AISecurityLab/hackagent/main/docs/docs/attacks/

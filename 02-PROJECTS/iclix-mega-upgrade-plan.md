@@ -1,3 +1,11 @@
+---
+type: project
+status: complete
+priority: high
+tags:
+  - project
+  - iclix
+---
 # ICLIX MEGA UPGRADE — Execution Plan
 
 ## Status: IN PROGRESS — Pre-Scrape Running

@@ -1,3 +1,11 @@
+---
+type: project
+status: complete
+priority: medium
+tags:
+  - project
+  - ctf
+---
 # 🎮 CTF Command Library
 
 ## 🟢 EASY — 1-step decode

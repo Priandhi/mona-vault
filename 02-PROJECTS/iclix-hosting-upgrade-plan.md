@@ -1,3 +1,12 @@
+---
+type: project
+status: complete
+priority: medium
+tags:
+  - project
+  - iclix
+  - hosting
+---
 # ICLIX Hosting Upgrade Plan
 > Created: 2026-06-20
 > Status: PLANNING (belum eksekusi)

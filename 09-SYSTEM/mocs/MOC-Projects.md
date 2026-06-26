@@ -11,22 +11,22 @@ updated: 2026-06-27
 
 | Project | Priority | Status | Modified |
 | :--- | :---: | :---: | :---: |
-| [[iclix]] | 🔥 High | 🟢 Active | |
-| [[gandalf-operation]] | 🔥 High | 🟡 Pending | |
+| [[02-PROJECTS/iclix]] | 🔥 High | 🟢 Active | |
+| [[02-PROJECTS/gandalf-operation]] | 🔥 High | 🟡 Pending | |
 
 ## 🟡 Standby
 
 | Project | Priority | Status | Modified |
 | :--- | :---: | :---: | :---: |
-| [[iclix-hosting-upgrade-plan]] | 🟡 Medium | ✅ Done | |
-| [[iclix-mega-upgrade-plan]] | 🟡 Medium | ✅ Done | |
+| [[02-PROJECTS/iclix-hosting-upgrade-plan]] | 🟡 Medium | ✅ Done | |
+| [[02-PROJECTS/iclix-mega-upgrade-plan]] | 🟡 Medium | ✅ Done | |
 
 ## 📦 Archive
 
 | Project | Status | Modified |
 | :--- | :---: | :---: |
-| [[ctf-commands]] | ✅ Done | |
-| [[ctf-quick-paste]] | ✅ Done | |
+| [[02-PROJECTS/ctf-commands]] | ✅ Done | |
+| [[02-PROJECTS/ctf-quick-paste]] | ✅ Done | |
 
 ---
 
