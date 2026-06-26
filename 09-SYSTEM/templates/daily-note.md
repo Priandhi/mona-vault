@@ -1,4 +1,5 @@
 ---
+type: daily
 date: <% tp.date.now("YYYY-MM-DD") %>
 week: <% tp.date.now("gggg-[W]ww") %>
 mood: 
