@@ -1,3 +1,12 @@
+---
+type: resource
+tags:
+  - resource
+  - ai
+  - research
+  - prompt-injection
+---
+
 # Opus 4.8 Counter-Strategy
 
 > After testing against thinking model (Sonnet 4.5-thinking)

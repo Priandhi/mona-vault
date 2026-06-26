@@ -1,3 +1,9 @@
+---
+type: kanban
+tags:
+  - kanban
+---
+
 # 💹 YUNA — The Strategist
 # Trading & LP Operations Board
 > Last Update: 2026-06-22 11:20 CST

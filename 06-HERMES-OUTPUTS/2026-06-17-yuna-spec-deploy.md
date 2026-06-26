@@ -1,3 +1,10 @@
+---
+type: receipt
+date: 2026-06-17
+tags:
+  - receipt
+---
+
 # YUNA Receipt — 2026-06-17 — Spec Deploy (Hexa: margin/leverage/SL/TP)
 
 **Task:** Apply Hexa-specific config — leverage 20x, margin $75-115, SL 4%, R:R-based TP, liq validation

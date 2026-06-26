@@ -1,3 +1,10 @@
+---
+type: project
+tags:
+  - project
+  - ctf
+---
+
 # 🎮 CTF Commands — Quick Paste Format
 
 Single-line format biar gak ke-truncate pas copy dari markdown.

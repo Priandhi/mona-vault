@@ -1,3 +1,10 @@
+---
+type: receipt
+date: 2026-06-21
+tags:
+  - receipt
+---
+
 # AgentRouter Token `9QmA9T...Um8=` Investigation — 2026-06-21
 
 ## Discovery: This is a USER ACCESS TOKEN, not CHANNEL KEY

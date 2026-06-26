@@ -1,3 +1,13 @@
+---
+type: resource
+tags:
+  - resource
+  - ctf
+  - binary-exploitation
+  - learning
+  - skill-audit
+---
+
 # Mona Skill Audit — 2026-06-25
 
 ## PWN / Binary Exploitation — 85% ✅

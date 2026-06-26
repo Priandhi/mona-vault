@@ -1,3 +1,12 @@
+---
+type: receipt
+date: 2026-06-14
+tags:
+  - receipt
+  - vps
+  - infrastructure
+---
+
 # Receipt: 2026-06-14-init-vault.md
 
 ## Task

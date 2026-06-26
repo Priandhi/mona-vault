@@ -1,3 +1,11 @@
+---
+type: resource
+tags:
+  - resource
+  - research
+  - android
+---
+
 # WebToApp — shiaho777/web-to-app
 
 **Research date:** 2026-06-24

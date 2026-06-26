@@ -1,3 +1,12 @@
+---
+type: receipt
+date: 2026-06-18
+tags:
+  - receipt
+  - iclix
+  - streaming
+---
+
 # ICLIX Mega Upgrade — Phase 1 and 3 Complete
 
 **Date:** 2026-06-18

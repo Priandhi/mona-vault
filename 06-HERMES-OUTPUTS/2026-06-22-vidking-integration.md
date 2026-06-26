@@ -1,3 +1,12 @@
+---
+type: receipt
+date: 2026-06-22
+tags:
+  - receipt
+  - iclix
+  - streaming
+---
+
 # Receipt: VidKing Integration — ICLIX Direct m3u8 Playback
 **Date:** 2026-06-22
 **Status:** ✅ Deployed

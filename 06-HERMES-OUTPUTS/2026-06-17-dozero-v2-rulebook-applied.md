@@ -1,3 +1,10 @@
+---
+type: receipt
+date: 2026-06-17
+tags:
+  - receipt
+---
+
 # YUNA Receipt — 2026-06-17 16:38 — DOZERO.X v2 Rulebook Applied
 
 **Task:** Apply DOZERO.X v2 Complete Rulebook (SMC + Order Flow integration)

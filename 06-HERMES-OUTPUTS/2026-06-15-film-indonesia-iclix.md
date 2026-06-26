@@ -1,3 +1,12 @@
+---
+type: receipt
+date: 2026-06-15
+tags:
+  - receipt
+  - iclix
+  - streaming
+---
+
 # Receipt: Halaman Film Indonesia untuk ICLIX
 
 **Task:** Cari film terbaru dari bioskop Indonesia dan masukin ke ICLIX

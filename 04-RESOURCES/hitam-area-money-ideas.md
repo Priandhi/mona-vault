@@ -1,3 +1,11 @@
+---
+type: resource
+tags:
+  - resource
+  - ideas
+  - business
+---
+
 # ☠️ AREA HITAM — Ide Cuan Brutal
 
 > Dikumpulkan: 2026-06-24

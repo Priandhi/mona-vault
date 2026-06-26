@@ -1,3 +1,12 @@
+---
+type: resource
+tags:
+  - resource
+  - iclix
+  - streaming
+  - design
+---
+
 # ICLIX Design Reference — IDLIX Premium Style
 
 ## Status: Reference Complete, Pending Execution

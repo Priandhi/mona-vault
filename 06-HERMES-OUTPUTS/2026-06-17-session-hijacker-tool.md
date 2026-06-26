@@ -1,3 +1,10 @@
+---
+type: receipt
+date: 2026-06-17
+tags:
+  - receipt
+---
+
 # Receipt: Session Hijacker Tool Built
 
 **Task:** Build premium account checker + session harvester tool

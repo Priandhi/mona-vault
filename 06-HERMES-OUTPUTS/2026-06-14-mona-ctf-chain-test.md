@@ -1,3 +1,11 @@
+---
+type: receipt
+date: 2026-06-14
+tags:
+  - receipt
+  - ctf
+---
+
 Date     : 2026-06-14
 Agent    : MONA — The Architect
 Task     : CTF Chain Test + Phase 2 Full + Disk Cleanup

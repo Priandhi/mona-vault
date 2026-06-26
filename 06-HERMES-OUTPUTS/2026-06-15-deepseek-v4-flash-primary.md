@@ -1,3 +1,10 @@
+---
+type: receipt
+date: 2026-06-15
+tags:
+  - receipt
+---
+
 # Switch primary model → orcarouter/deepseek/deepseek-v4-flash
 
 **Task:** Switch `model.default` di `~/.hermes/config.yaml` dari `tokenrouter/MiniMax-M3` ke `orcarouter/deepseek/deepseek-v4-flash`. User prefer OrcaRouter (2 keys) bukan Zyloo (Zyloo-01 udah 402 Insufficient credit).

@@ -1,3 +1,10 @@
+---
+type: receipt
+date: 2026-06-16
+tags:
+  - receipt
+---
+
 Date     : 2026-06-16
 Agent    : YUNA — The Strategist
 Task     : Fix cron 'yuna-soft-stop' script-not-found error

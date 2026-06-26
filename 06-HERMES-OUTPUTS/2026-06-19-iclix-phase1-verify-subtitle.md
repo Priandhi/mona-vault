@@ -1,3 +1,12 @@
+---
+type: receipt
+date: 2026-06-19
+tags:
+  - receipt
+  - iclix
+  - streaming
+---
+
 # Receipt: ICLIX Subtitle Auto-Generator + Phase 1 Verification
 Date: 2026-06-19
 

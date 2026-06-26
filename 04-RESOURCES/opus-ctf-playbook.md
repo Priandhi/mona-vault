@@ -1,3 +1,13 @@
+---
+type: resource
+tags:
+  - resource
+  - ctf
+  - ai
+  - research
+  - prompt-injection
+---
+
 # OPUS GUARD CTF PLAYBOOK
 
 > 140+ live tests against Opus 4.6 guard

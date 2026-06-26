@@ -1,3 +1,10 @@
+---
+type: receipt
+date: 2026-06-16
+tags:
+  - receipt
+---
+
 # Receipt: Dozero.X Post-Mortem BANK/INX/AR + Risk Filter Overhaul
 
 **Date:** 2026-06-16

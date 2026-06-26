@@ -1,3 +1,12 @@
+---
+type: receipt
+date: 2026-06-17
+tags:
+  - receipt
+  - iclix
+  - streaming
+---
+
 # Receipt — Money Heist di ICLIX
 **Date:** 2026-06-17
 **Task:** Verifikasi ketersediaan Money Heist Spanish + Korea full episode di ICLIX

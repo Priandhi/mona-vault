@@ -1,3 +1,10 @@
+---
+type: receipt
+date: 2026-06-17
+tags:
+  - receipt
+---
+
 # YUNA Receipt — 2026-06-17 16:30 — Dozero Upgrade Prep
 
 **Task:** Backup current dozero engine before upgrade + stop PM2

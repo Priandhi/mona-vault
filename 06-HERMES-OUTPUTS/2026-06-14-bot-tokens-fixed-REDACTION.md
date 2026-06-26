@@ -1,3 +1,10 @@
+---
+type: receipt
+date: 2026-06-14
+tags:
+  - receipt
+---
+
 # Receipt: 2026-06-14-bot-tokens-fixed-REDACTION.md
 
 ## Task

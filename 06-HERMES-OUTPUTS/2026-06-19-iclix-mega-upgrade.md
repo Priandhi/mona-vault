@@ -1,3 +1,12 @@
+---
+type: receipt
+date: 2026-06-19
+tags:
+  - receipt
+  - iclix
+  - streaming
+---
+
 # ICLIX Mega Upgrade — Progress Receipt
 Date: 2026-06-19
 

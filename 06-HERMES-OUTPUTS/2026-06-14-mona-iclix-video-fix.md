@@ -1,3 +1,12 @@
+---
+type: receipt
+date: 2026-06-14
+tags:
+  - receipt
+  - iclix
+  - streaming
+---
+
 # 2026-06-14 — ICLIX Video Playback Fix
 
 ## Result

@@ -1,3 +1,10 @@
+---
+type: receipt
+date: 2026-06-22
+tags:
+  - receipt
+---
+
 # 2026-06-22 — DOZERO→PROJECT VIOLET TRANSITION (YUNA)
 
 ## Task

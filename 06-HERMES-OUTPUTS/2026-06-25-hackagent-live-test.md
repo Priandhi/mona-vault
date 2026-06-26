@@ -1,3 +1,13 @@
+---
+type: receipt
+date: 2026-06-25
+tags:
+  - receipt
+  - ai
+  - security
+  - jailbreak
+---
+
 # 2026-06-25 — HackAgent Live Test + SE Framing Discovery
 
 **Task:** Tes langsung 7 teknik HackAgent ke target AI nyata. Ditemukan jailbreak technique baru.

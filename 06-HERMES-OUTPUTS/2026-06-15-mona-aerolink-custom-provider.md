@@ -1,3 +1,13 @@
+---
+type: receipt
+date: 2026-06-15
+tags:
+  - receipt
+  - ai
+  - research
+  - prompt-injection
+---
+
 # 2026-06-15 — Aerolink Custom Provider Setup (1-Day Override)
 
 ## Task

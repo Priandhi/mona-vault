@@ -1,3 +1,12 @@
+---
+type: receipt
+date: 2026-06-15
+tags:
+  - receipt
+  - iclix
+  - streaming
+---
+
 # Receipt: ICLIX Anime Fix — 2026-06-15
 
 ## Task

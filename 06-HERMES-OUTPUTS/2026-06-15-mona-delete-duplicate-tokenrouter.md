@@ -1,3 +1,10 @@
+---
+type: receipt
+date: 2026-06-15
+tags:
+  - receipt
+---
+
 # Receipt — Delete duplicate TokenRouter-01 from 9Router
 
 **Date**     : 2026-06-15

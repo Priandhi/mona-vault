@@ -1,3 +1,10 @@
+---
+type: receipt
+date: 2026-06-21
+tags:
+  - receipt
+---
+
 # AgentRouter (agentrouter.org) — Full Reverse Engineering — 2026-06-21
 
 ## ✅ AUTH FULLY REVERSED (but service in lockdown)

@@ -1,3 +1,10 @@
+---
+type: receipt
+date: 2026-06-15
+tags:
+  - receipt
+---
+
 # Receipt: Dozero.X SMC Trading Bot — Implementation
 
 **Task:** Implementasi Dozero.X SMC trading bot untuk Binance Futures menggunakan Testnet

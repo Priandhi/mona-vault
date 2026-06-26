@@ -1,3 +1,12 @@
+---
+type: receipt
+date: 2026-06-18
+tags:
+  - receipt
+  - iclix
+  - streaming
+---
+
 # Receipt: World Cup 2026 Live TV - ICLIX
 
 **Date:** 2026-06-18

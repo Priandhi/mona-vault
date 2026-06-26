@@ -1,3 +1,12 @@
+---
+type: receipt
+date: 2026-06-21
+tags:
+  - receipt
+  - iclix
+  - streaming
+---
+
 # Video Player Critical Fix — 2026-06-21
 
 ## Task

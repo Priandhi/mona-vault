@@ -1,3 +1,11 @@
+---
+type: resource
+tags:
+  - resource
+  - ctf
+  - binary-exploitation
+---
+
 # PWN Deep Dive Results — 2026-06-25
 
 ## Final Status

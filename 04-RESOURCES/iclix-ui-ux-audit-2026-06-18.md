@@ -1,3 +1,11 @@
+---
+type: resource
+tags:
+  - resource
+  - iclix
+  - streaming
+---
+
 # ICLIX UI/UX Audit — 2026-06-18
 
 ## Status: Audit Complete, Pending Execution

@@ -1,3 +1,10 @@
+---
+type: receipt
+date: 2026-06-22
+tags:
+  - receipt
+---
+
 # 2026-06-22 — TUNING MODE + DAILY REPORT (YUNA)
 
 ## Task

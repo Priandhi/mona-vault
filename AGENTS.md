@@ -126,3 +126,7 @@
 - Wallet secrets stay in `05-WALLET/` (git-ignored) — never in receipts
 - When in doubt, write to `00-INBOX/` first, process later
 - Kanban updated on every task transition (BACKLOG → IN PROGRESS → DONE)
+- **EOD reflection WAJIB** — setiap akhir session, update daily note dengan 3 pertanyaan:
+  1. Apa yang maju?
+  2. Apa yang mandek?
+  3. Yang dibawa besok?

@@ -1,3 +1,9 @@
+---
+type: kanban
+tags:
+  - kanban
+---
+
 # 🎯 SOYU — The Phantom
 # Sniper & Alpha Operations Board
 > Last Update: 2026-06-16 (Charon PnL report sent to Hexa)

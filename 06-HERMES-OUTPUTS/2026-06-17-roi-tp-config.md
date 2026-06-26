@@ -1,3 +1,10 @@
+---
+type: receipt
+date: 2026-06-17
+tags:
+  - receipt
+---
+
 Date     : 2026-06-17
 Agent    : YUNA — The Strategist
 Task     : Change TP to ROI-based (100%/200%/300% of margin)

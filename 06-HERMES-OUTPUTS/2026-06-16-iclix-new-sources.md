@@ -1,3 +1,12 @@
+---
+type: receipt
+date: 2026-06-16
+tags:
+  - receipt
+  - iclix
+  - streaming
+---
+
 # Receipt: ICLIX New Embed Sources — 2026-06-16
 
 **Task:** Cari embed sources baru yang lebih bagus & reliable untuk ICLIX streaming.

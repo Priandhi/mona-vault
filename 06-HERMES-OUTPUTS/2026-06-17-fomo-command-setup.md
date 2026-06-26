@@ -1,3 +1,10 @@
+---
+type: receipt
+date: 2026-06-17
+tags:
+  - receipt
+---
+
 # Receipt — 2026-06-17-fomo-command-setup
 
 - **Task:** Setup Fomo Family topic + command handler di PROJECT VIOLET

@@ -1,3 +1,12 @@
+---
+type: receipt
+date: 2026-06-17
+tags:
+  - receipt
+  - iclix
+  - streaming
+---
+
 # Receipt — Obscura: Ganti Playwright Scraper
 **Date:** 2026-06-17
 **Task:** Ganti Python Playwright scraper dengan Obscura (Rust headless browser) untuk ICLIX backend

@@ -1,3 +1,12 @@
+---
+type: receipt
+date: 2026-06-25
+tags:
+  - receipt
+  - learning
+  - skill-development
+---
+
 # MONA LEARNING REPORT — 2026-06-25
 
 ## Progress: FIX Day 1 (3/9 skills)

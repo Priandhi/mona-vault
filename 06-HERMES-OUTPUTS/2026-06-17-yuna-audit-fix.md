@@ -1,3 +1,10 @@
+---
+type: receipt
+date: 2026-06-17
+tags:
+  - receipt
+---
+
 # YUNA Receipt — 2026-06-17 — Audit + Fix (Hexa feedback: "ngawur")
 
 **Task:** Audit settings, identify why trading felt random, fix

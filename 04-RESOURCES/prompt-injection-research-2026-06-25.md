@@ -1,3 +1,13 @@
+---
+type: resource
+tags:
+  - resource
+  - ctf
+  - prompt-injection
+  - ai
+  - research
+---
+
 # Prompt Injection Research — 2026-06-25
 
 ## Opus 4.6 Guard Test Results

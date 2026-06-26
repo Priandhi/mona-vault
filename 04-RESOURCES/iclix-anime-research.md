@@ -1,3 +1,11 @@
+---
+type: resource
+tags:
+  - resource
+  - iclix
+  - streaming
+---
+
 # ICLIX Anime Research — 2026-06-19
 
 ## Current State

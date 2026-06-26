@@ -1,3 +1,13 @@
+---
+type: receipt
+date: 2026-06-18
+tags:
+  - receipt
+  - iclix
+  - streaming
+  - design
+---
+
 # ICLIX Subtitle Auto-Generator — DONE
 
 **Date:** 2026-06-18

@@ -1,3 +1,9 @@
+---
+type: kanban
+tags:
+  - kanban
+---
+
 # 🎯 MASTER KANBAN — COMMAND CENTER
 > MONA SQUAD: 5-Agent System — YUNA 💹 | SOYU 🎯 | YERIN ⛏️ | HAERI 🍀
 > Last Update: 2026-06-23

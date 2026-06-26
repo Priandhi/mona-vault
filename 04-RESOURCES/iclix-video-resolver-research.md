@@ -1,3 +1,12 @@
+---
+type: resource
+tags:
+  - resource
+  - iclix
+  - streaming
+  - design
+---
+
 # ICLIX Video Resolver — Research & Bahan
 
 > Tanggal: 2026-06-18

@@ -1,3 +1,14 @@
+---
+type: resource
+tags:
+  - resource
+  - ai
+  - research
+  - prompt-injection
+  - learning
+  - skill-development
+---
+
 # Opus Learning — Deep Internalization
 ## Tanggal: 2026-06-20
 

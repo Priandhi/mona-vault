@@ -1,3 +1,12 @@
+---
+type: receipt
+date: 2026-06-20
+tags:
+  - receipt
+  - iclix
+  - streaming
+---
+
 # ICLIX Hosting Upgrade — Receipt
 
 **Date:** 2026-06-20

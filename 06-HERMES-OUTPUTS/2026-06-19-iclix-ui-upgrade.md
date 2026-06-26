@@ -1,3 +1,12 @@
+---
+type: receipt
+date: 2026-06-19
+tags:
+  - receipt
+  - iclix
+  - streaming
+---
+
 # ICLIX UI Upgrade Session — 2026-06-19
 
 ## Task

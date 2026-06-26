@@ -1,3 +1,10 @@
+---
+type: receipt
+date: 2026-06-27
+tags:
+  - receipt
+---
+
 # Task: c0mpute Worker Modal Setup
 
 ## Task

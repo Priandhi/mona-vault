@@ -1,3 +1,10 @@
+---
+type: receipt
+date: 2026-06-21
+tags:
+  - receipt
+---
+
 # Merlin AI Proxy — 2026-06-21 Setup
 
 ## Status: PROXY RUNNING, LOGIN BLOCKED

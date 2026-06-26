@@ -1,3 +1,9 @@
+---
+type: kanban
+tags:
+  - kanban
+---
+
 # ⛏️ YERIN — The Grinder
 # Mining Operations Board
 > Last Update: 2026-06-17 (Mining PAUSED — belum ada coin/algoritma profitable)

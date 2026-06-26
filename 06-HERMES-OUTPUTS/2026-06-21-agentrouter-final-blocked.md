@@ -1,3 +1,10 @@
+---
+type: receipt
+date: 2026-06-21
+tags:
+  - receipt
+---
+
 # AgentRouter Final Status — 2026-06-21 (SERVICE DOWN)
 
 ## Final Conclusion: **AgentRouter chat endpoint is in service-level lockdown**

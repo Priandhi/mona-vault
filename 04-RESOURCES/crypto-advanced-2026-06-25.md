@@ -1,3 +1,11 @@
+---
+type: resource
+tags:
+  - resource
+  - crypto
+  - ctf
+---
+
 # Crypto Advanced — 2026-06-25
 
 ## Padding Oracle Attack — ✅ PRACTICED

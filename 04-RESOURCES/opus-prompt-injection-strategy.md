@@ -1,3 +1,13 @@
+---
+type: resource
+tags:
+  - resource
+  - ctf
+  - prompt-injection
+  - ai
+  - research
+---
+
 # Opus-Specific Prompt Injection Strategy
 
 > Claude Opus: smarter, more analytical, uses think blocks internally

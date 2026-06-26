@@ -1,3 +1,10 @@
+---
+type: receipt
+date: 2026-06-15
+tags:
+  - receipt
+---
+
 # 2026-06-15 — Live TV 5 Channel Nasional Legal
 
 ## Task

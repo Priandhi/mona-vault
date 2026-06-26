@@ -1,3 +1,10 @@
+---
+type: receipt
+date: 2026-06-21
+tags:
+  - receipt
+---
+
 # Receipt: 2026-06-21 — Squad System Overhaul + YUNA Fix
 
 **Task:** Perbaiki seluruh squad system (cleanup 9Router, fix YUNA config, simplify orchestrator, stop idle gateways)

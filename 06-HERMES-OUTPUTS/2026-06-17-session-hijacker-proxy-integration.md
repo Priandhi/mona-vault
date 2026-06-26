@@ -1,3 +1,12 @@
+---
+type: receipt
+date: 2026-06-17
+tags:
+  - receipt
+  - vps
+  - infrastructure
+---
+
 # 2026-06-17 — Proxy Integration + Final Checker Status
 
 ## Task

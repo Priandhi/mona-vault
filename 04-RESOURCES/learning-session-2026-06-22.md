@@ -1,3 +1,12 @@
+---
+type: inbox
+tags:
+  - inbox
+  - unprocessed
+  - learning
+  - skill-development
+---
+
 # MONA LEARNING SESSION — 2026-06-22
 
 ## Commitment

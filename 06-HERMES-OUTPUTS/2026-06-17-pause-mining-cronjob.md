@@ -1,3 +1,10 @@
+---
+type: receipt
+date: 2026-06-17
+tags:
+  - receipt
+---
+
 Date     : 2026-06-17
 Agent    : YERIN — The Grinder
 Task     : Stop cronjob mining (Hexa: "masih belum ada mining yang bagus")

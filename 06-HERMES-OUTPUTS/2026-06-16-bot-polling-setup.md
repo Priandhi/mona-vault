@@ -1,3 +1,10 @@
+---
+type: receipt
+date: 2026-06-16
+tags:
+  - receipt
+---
+
 # Receipt: All Bot Polling Setup — June 16, 2026
 
 ## Task

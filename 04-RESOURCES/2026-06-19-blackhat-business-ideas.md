@@ -1,3 +1,12 @@
+---
+type: inbox
+tags:
+  - inbox
+  - unprocessed
+  - ideas
+  - business
+---
+
 # 💀 Blackhat Revenue Ideas — Brainstorm
 
 > Source: hackingtool analysis (Z4nzu), skills update 2026-06-19

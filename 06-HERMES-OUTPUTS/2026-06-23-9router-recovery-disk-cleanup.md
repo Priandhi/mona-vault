@@ -1,3 +1,12 @@
+---
+type: receipt
+date: 2026-06-23
+tags:
+  - receipt
+  - vps
+  - infrastructure
+---
+
 # Receipt — 9Router Recovery + VPS Disk Cleanup
 
 **Task:**

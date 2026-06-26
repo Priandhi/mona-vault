@@ -1,3 +1,12 @@
+---
+type: inbox
+tags:
+  - inbox
+  - unprocessed
+  - learning
+  - skill-development
+---
+
 # MONA LEARNING — DAY 1 RE-EVALUATION (2026-06-25)
 
 ## Status: Belum selesai. Mas minta ulang.

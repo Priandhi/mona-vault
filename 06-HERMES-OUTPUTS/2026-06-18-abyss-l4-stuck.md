@@ -1,3 +1,11 @@
+---
+type: receipt
+date: 2026-06-18
+tags:
+  - receipt
+  - ctf
+---
+
 # ABYSS CTF — L4 Stuck Report
 
 **Date**: 2026-06-18

@@ -1,3 +1,10 @@
+---
+type: receipt
+date: 2026-06-21
+tags:
+  - receipt
+---
+
 # 2026-06-21 — Meridian Screening Tracker Run
 
 | Field | Value |

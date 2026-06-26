@@ -1,3 +1,11 @@
+---
+type: resource
+tags:
+  - resource
+  - ctf
+  - strategy
+---
+
 # CTF Decision Tree — Mona's Tactical Playbook
 
 > Diperbaharui: 2026-06-25 (3 CTF experience: 5 Gerbang Penjaga, ABYSS L1-L4)

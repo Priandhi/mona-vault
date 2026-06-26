@@ -1,3 +1,11 @@
+---
+type: receipt
+date: 2026-06-25
+tags:
+  - receipt
+  - ctf
+---
+
 # CTF Post-Mortem — Fifty Gates (Cupang Ventures)
 
 > Date: 2026-06-25

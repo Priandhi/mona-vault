@@ -1,3 +1,10 @@
+---
+type: receipt
+date: 2026-06-17
+tags:
+  - receipt
+---
+
 # 🔐 SESSION HIJACKER HARDENING — 2026-06-17
 
 ## Task

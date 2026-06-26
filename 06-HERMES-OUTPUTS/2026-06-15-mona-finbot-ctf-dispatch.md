@@ -1,3 +1,11 @@
+---
+type: receipt
+date: 2026-06-15
+tags:
+  - receipt
+  - ctf
+---
+
 Date     : 2026-06-15
 Agent    : MONA — The Architect
 Task     : OWASP FinBot CTF — full team coordination + recon

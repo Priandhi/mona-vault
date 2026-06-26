@@ -1,3 +1,10 @@
+---
+type: receipt
+date: 2026-06-15
+tags:
+  - receipt
+---
+
 # 2026-06-15 — Orcarouter.ai Integration to 9Router
 
 ## Task

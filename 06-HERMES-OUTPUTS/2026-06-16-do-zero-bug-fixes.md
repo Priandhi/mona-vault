@@ -1,3 +1,10 @@
+---
+type: receipt
+date: 2026-06-16
+tags:
+  - receipt
+---
+
 # Receipt: Dozero.X Bug Fixes — 2026-06-16
 
 ## Task

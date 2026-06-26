@@ -1,3 +1,12 @@
+---
+type: receipt
+date: 2026-06-16
+tags:
+  - receipt
+  - iclix
+  - streaming
+---
+
 # Receipt: ICLIX Bug Hunt — 2026-06-16
 
 **Task:** Scan seluruh web ICLIX dari ujung ke ujung buat cari bug, error, dan broken features. Fix yang ditemukan.

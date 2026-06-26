@@ -1,3 +1,9 @@
+---
+type: kanban
+tags:
+  - kanban
+---
+
 # 🍀 HAERI — The Collector
 # Airdrop & NFT Operations Board
 > Last Update: 2026-06-17 (Airdrop cron paused ⏸️)

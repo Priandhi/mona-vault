@@ -1,3 +1,10 @@
+---
+type: receipt
+date: 2026-06-24
+tags:
+  - receipt
+---
+
 # Receipt: OC Zen Hybrid Balancer + 9Router Integration
 
 **Date:** 2026-06-24

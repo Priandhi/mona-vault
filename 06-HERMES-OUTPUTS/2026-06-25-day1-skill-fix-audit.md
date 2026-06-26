@@ -1,3 +1,12 @@
+---
+type: receipt
+date: 2026-06-25
+tags:
+  - receipt
+  - iclix
+  - streaming
+---
+
 # Receipt: Day 1 Skill Fix Audit — 2026-06-25
 
 **Task:** Perbaiki semua celah dari Day 1 skill audit (4 skills: credential-stuffing, ICLIX IDOR, blockchain-security, js-api-key-harvester)

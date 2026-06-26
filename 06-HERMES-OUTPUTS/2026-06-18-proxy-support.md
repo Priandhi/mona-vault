@@ -1,3 +1,10 @@
+---
+type: receipt
+date: 2026-06-18
+tags:
+  - receipt
+---
+
 # 2026-06-18 — PROXY SUPPORT (YUNA)
 
 ## Task

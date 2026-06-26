@@ -1,3 +1,12 @@
+---
+type: receipt
+date: 2026-06-15
+tags:
+  - receipt
+  - vps
+  - infrastructure
+---
+
 # Receipt — Full VPS restore: PM2 daemon crashed, brought back 11 services
 
 **Date**     : 2026-06-15

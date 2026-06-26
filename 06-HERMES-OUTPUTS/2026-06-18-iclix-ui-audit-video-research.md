@@ -1,3 +1,12 @@
+---
+type: receipt
+date: 2026-06-18
+tags:
+  - receipt
+  - iclix
+  - streaming
+---
+
 # Receipt — ICLIX UI/UX Audit + Video Resolver Research
 
 **Date:** 2026-06-18
