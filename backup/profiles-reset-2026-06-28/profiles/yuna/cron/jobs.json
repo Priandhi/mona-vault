@@ -1,0 +1,177 @@
+{
+  "jobs": [
+    {
+      "id": "f4fc8ce3a405",
+      "name": "yuna-soft-stop",
+      "prompt": "",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "yuna_soft_stop.py",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/5 * * * *",
+        "display": "*/5 * * * *"
+      },
+      "schedule_display": "*/5 * * * *",
+      "repeat": {
+        "times": null,
+        "completed": 1126
+      },
+      "enabled": false,
+      "state": "paused",
+      "paused_at": "2026-06-21T14:12:45.129793+08:00",
+      "paused_reason": null,
+      "created_at": "2026-06-16T22:53:17.625493+08:00",
+      "next_run_at": "2026-06-21T14:15:00+08:00",
+      "last_run_at": "2026-06-21T14:10:34.420305+08:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-1003899936547",
+        "chat_name": "PROJECT VIOLET",
+        "thread_id": "2905"
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "483b2e0869ca",
+      "name": "yuna-violet-scan",
+      "prompt": "",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "yuna_violet_cron.py",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/5 * * * *",
+        "display": "*/5 * * * *"
+      },
+      "schedule_display": "*/5 * * * *",
+      "repeat": {
+        "times": null,
+        "completed": 66
+      },
+      "enabled": false,
+      "state": "paused",
+      "paused_at": "2026-06-22T20:07:24.002562+08:00",
+      "paused_reason": null,
+      "created_at": "2026-06-22T14:24:01.641150+08:00",
+      "next_run_at": "2026-06-22T20:10:00+08:00",
+      "last_run_at": "2026-06-22T20:05:53.131157+08:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-1003899936547",
+        "chat_name": "PROJECT VIOLET",
+        "thread_id": "2905"
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "cd81a3b77161",
+      "name": "yuna-tuning-daily",
+      "prompt": "",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "yuna_tuning_report.py",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 23 * * *",
+        "display": "0 23 * * *"
+      },
+      "schedule_display": "0 23 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 2
+      },
+      "enabled": false,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-22T14:52:31.892532+08:00",
+      "next_run_at": "2026-06-24T23:00:00+08:00",
+      "last_run_at": "2026-06-23T23:01:05.086115+08:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-1003899936547",
+        "chat_name": "PROJECT VIOLET",
+        "thread_id": "2905"
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "a8dd8c727082",
+      "name": "yuna-position-monitor",
+      "prompt": "",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "yuna_position_monitor.py",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/2 * * * *",
+        "display": "*/2 * * * *"
+      },
+      "schedule_display": "*/2 * * * *",
+      "repeat": {
+        "times": null,
+        "completed": 1407
+      },
+      "enabled": false,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-22T15:16:57.529950+08:00",
+      "next_run_at": "2026-06-24T14:12:00+08:00",
+      "last_run_at": "2026-06-24T14:10:34.453705+08:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-1003899936547",
+        "chat_name": "PROJECT VIOLET",
+        "thread_id": "2905"
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    }
+  ],
+  "updated_at": "2026-06-24T14:10:34.454269+08:00"
+}

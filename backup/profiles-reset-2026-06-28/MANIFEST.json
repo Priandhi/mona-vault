@@ -1,0 +1,22 @@
+{
+  "backup_date": "2026-06-28T03:47:18.700024",
+  "reason": "Profile reset \u2014 delete yerin/haeri, reset soyu/yuna with new SOUL.md",
+  "profiles_backed_up": [
+    "yerin",
+    "haeri",
+    "soyu",
+    "yuna"
+  ],
+  "excluded": [
+    "logs/",
+    "state.db",
+    "sessions/",
+    "cache/",
+    "audio_cache/",
+    "image_cache/",
+    "bin/tirith",
+    ".curator_backups/"
+  ],
+  "bot_tokens_preserved": true,
+  "note": "Bot tokens (TELEGRAM_BOT_TOKEN) preserved in .env files. YUNA+SOYU will be recreated with same tokens but new SOUL.md."
+}

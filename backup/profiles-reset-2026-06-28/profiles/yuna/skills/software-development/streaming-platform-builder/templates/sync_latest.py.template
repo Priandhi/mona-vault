@@ -1,0 +1,243 @@
+#!/usr/bin/env python3
+"""
+ICLIX Auto-Discovery Sync — REUSABLE TEMPLATE
+
+Polls TMDB for latest movies + TV episodes, stores in cache/latest.json,
+sends Telegram notification on new IDs (deduped against state.json).
+
+Run daily via cron:
+  0 2 * * * /usr/bin/python3 /home/ubuntu/<project>/scripts/sync_latest.py >> /home/ubuntu/<project>/cache/sync.log 2>&1
+
+Sources:
+  - TMDB /movie/now_playing   (movies in theaters now, region=ID)
+  - TMDB /movie/upcoming       (next 30 days)
+  - TMDB /tv/on_the_air        (currently airing TV)
+  - TMDB /discover/movie (Asian) - Korea/China/Japan/Thailand new releases (60d window)
+
+Output:
+  <project>/cache/latest.json  — cumulative, never shrinks
+  <project>/cache/state.json   — last sync state, seen IDs (matters: prevents TG spam)
+  <project>/cache/sync.log     — cron stdout/stderr
+
+Notifications:
+  Telegram bot via env (TELEGRAM_BOT_TOKEN + TELEGRAM_HOME_CHAT_ID or TELEGRAM_HOME_CHANNEL)
+  Only sends when delta > 0 (so cron running every day doesn't spam)
+
+To adapt for another project:
+  1. Update TMDB_KEY fallback / env name
+  2. Update CACHE path
+  3. Update ICLIX_PUBLIC_URL in TG notification footer
+  4. Adjust language list (`for lang in ['ko','zh','ja','th']`) and date window as needed
+"""
+import json
+import os
+import sys
+import time
+from datetime import datetime, timezone, timedelta
+from pathlib import Path
+from urllib.request import Request, urlopen
+from urllib.parse import urlencode
+
+# === Config ===
+TMDB_KEY = os.environ.get("TMDB_API_KEY", "<FALLBACK_KEY_HERE>")
+CACHE = Path("/home/ubuntu/<PROJECT>/cache")  # ← CHANGE PER PROJECT
+STATE_FILE = CACHE / "state.json"
+LATEST_FILE = CACHE / "latest.json"
+WIB = timezone(timedelta(hours=8))
+CACHE.mkdir(parents=True, exist_ok=True)
+
+# === HTTP helper ===
+def tmdb(path, params=None):
+    base = "https://api.themoviedb.org/3"
+    q = dict(params or {})
+    q["api_key"] = TMDB_KEY
+    q["language"] = "en-US"  # CRITICAL: see streaming-platform-builder SKILL pitfall
+    url = f"{base}{path}?{urlencode(q)}"
+    req = Request(url, headers={"User-Agent": "<PROJECT>-Sync/1.0"})  # ← CHANGE PER PROJECT
+    return json.loads(urlopen(req, timeout=20).read())
+
+# === State I/O ===
+def load_state():
+    if STATE_FILE.exists():
+        return json.loads(STATE_FILE.read_text())
+    return {"seen_movie_ids": [], "seen_tv_ids": [], "last_sync": ""}
+
+def save_state(state):
+    STATE_FILE.write_text(json.dumps(state, indent=2))
+
+def load_latest():
+    if LATEST_FILE.exists():
+        return json.loads(LATEST_FILE.read_text())
+    return {"movies": [], "tv": [], "asian_releases": [], "updated": ""}
+
+def save_latest(d):
+    LATEST_FILE.write_text(json.dumps(d, indent=2))
+
+# === Telegram ===
+def tg_send(text):
+    token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+    chat = (os.environ.get("TELEGRAM_HOME_CHAT_ID", "")
+            or os.environ.get("TELEGRAM_HOME_CHANNEL", ""))
+    if not token or not chat:
+        return False
+    try:
+        url = f"https://api.telegram.org/bot{token}/sendMessage"
+        data = urlencode({"chat_id": chat, "text": text,
+                          "parse_mode": "HTML",
+                          "disable_web_page_preview": "true"}).encode()
+        req = Request(url, data=data, method="POST")
+        urlopen(req, timeout=10).read()
+        return True
+    except Exception as e:
+        print(f"[tg] {e}", file=sys.stderr)
+        return False
+
+# === Collectors ===
+def fetch_movies():
+    items = []
+    seen_ids = set()
+    for path, label in [
+        ("/movie/now_playing", "🎬 In Theaters"),
+        ("/movie/upcoming", "🆕 Coming Soon"),
+    ]:
+        try:
+            d = tmdb(path, {"region": "ID", "page": 1})
+            for m in d.get("results", [])[:15]:
+                mid = m.get("id")
+                if mid in seen_ids:
+                    continue
+                seen_ids.add(mid)
+                items.append({
+                    "id": mid,
+                    "title": m.get("title"),
+                    "original_title": m.get("original_title"),
+                    "overview": (m.get("overview") or "")[:200],
+                    "poster": f"https://image.tmdb.org/t/p/w500{m['poster_path']}" if m.get("poster_path") else None,
+                    "backdrop": f"https://image.tmdb.org/t/p/original{m['backdrop_path']}" if m.get("backdrop_path") else None,
+                    "release_date": m.get("release_date"),
+                    "vote_average": m.get("vote_average", 0),
+                    "category": label,
+                    "type": "movie",
+                })
+        except Exception as e:
+            print(f"[movie:{label}] {e}", file=sys.stderr)
+    return items
+
+def fetch_tv():
+    items = []
+    try:
+        d = tmdb("/tv/on_the_air", {"page": 1})
+        for t in d.get("results", [])[:15]:
+            items.append({
+                "id": t.get("id"),
+                "name": t.get("name"),
+                "original_name": t.get("original_name"),
+                "overview": (t.get("overview") or "")[:200],
+                "poster": f"https://image.tmdb.org/t/p/w500{t['poster_path']}" if t.get("poster_path") else None,
+                "backdrop": f"https://image.tmdb.org/t/p/original{t['backdrop_path']}" if t.get("backdrop_path") else None,
+                "first_air_date": t.get("first_air_date"),
+                "vote_average": t.get("vote_average", 0),
+                "type": "tv",
+            })
+    except Exception as e:
+        print(f"[tv] {e}", file=sys.stderr)
+    return items
+
+def fetch_asian_releases(langs=("ko", "zh", "ja", "th"), days_back=60):
+    """New Korean/Chinese/Japanese/Thai releases in the last N days."""
+    items = []
+    today = datetime.now(WIB).strftime("%Y-%m-%d")
+    for lang in langs:
+        try:
+            d = tmdb("/discover/movie", {
+                "with_original_language": lang,
+                "sort_by": "primary_release_date.desc",
+                "primary_release_date.lte": today,
+                "primary_release_date.gte": (datetime.now(WIB) - timedelta(days=days_back)).strftime("%Y-%m-%d"),
+                "vote_count.gte": 5,
+                "page": 1,
+            })
+            for m in d.get("results", [])[:8]:
+                items.append({
+                    "id": m.get("id"),
+                    "title": m.get("title"),
+                    "original_title": m.get("original_title"),
+                    "overview": (m.get("overview") or "")[:200],
+                    "poster": f"https://image.tmdb.org/t/p/w500{m['poster_path']}" if m.get("poster_path") else None,
+                    "backdrop": f"https://image.tmdb.org/t/p/original{m['backdrop_path']}" if m.get("backdrop_path") else None,
+                    "release_date": m.get("release_date"),
+                    "vote_average": m.get("vote_average", 0),
+                    "category": f"{lang} Asian Release",
+                    "type": "movie",
+                })
+        except Exception as e:
+            print(f"[asian:{lang}] {e}", file=sys.stderr)
+    # Dedup by id (defensive)
+    seen = set()
+    dedup = []
+    for it in items:
+        if it["id"] not in seen:
+            seen.add(it["id"])
+            dedup.append(it)
+    return dedup
+
+# === Main ===
+def main():
+    print(f"[sync] starting at {datetime.now(WIB).isoformat()}")
+    state = load_state()
+    seen_movies = set(state.get("seen_movie_ids", []))
+    seen_tv = set(state.get("seen_tv_ids", []))
+
+    movies = fetch_movies()
+    tv = fetch_tv()
+    asian = fetch_asian_releases()
+
+    new_movies = [m for m in movies if m["id"] not in seen_movies]
+    new_tv = [t for t in tv if t["id"] not in seen_tv]
+    new_asian = [a for a in asian if a["id"] not in seen_movies]
+
+    print(f"[sync] movies={len(movies)} tv={len(tv)} asian={len(asian)} "
+          f"NEW: movies={len(new_movies)} tv={len(new_tv)} asian={len(new_asian)}")
+
+    # Update state (cumulative — never remove IDs)
+    state["seen_movie_ids"] = list(seen_movies | {m["id"] for m in movies} | {a["id"] for a in asian})
+    state["seen_tv_ids"] = list(seen_tv | {t["id"] for t in tv})
+    state["last_sync"] = datetime.now(WIB).isoformat(timespec="seconds")
+    save_state(state)
+
+    # Save latest
+    latest = load_latest()
+    latest["movies"] = movies
+    latest["tv"] = tv
+    latest["asian_releases"] = asian
+    latest["updated"] = state["last_sync"]
+    save_latest(latest)
+    print(f"[sync] saved to {LATEST_FILE}")
+
+    # TG notification only on delta
+    total_new = len(new_movies) + len(new_tv) + len(new_asian)
+    if total_new > 0:
+        lines = [f"🆕 <b><PROJECT> — {total_new} konten baru ditemukan</b>\n"]
+        if new_asian:
+            lines.append(f"🌏 <b>Asian Releases ({len(new_asian)}):</b>")
+            for a in new_asian[:5]:
+                yr = (a.get("release_date") or "")[:4]
+                lines.append(f" • {a.get('title')} ({yr}) ⭐{a.get('vote_average', 0):.1f}")
+        if new_movies:
+            lines.append(f"\n🎬 <b>In Theaters/Upcoming ({len(new_movies)}):</b>")
+            for m in new_movies[:5]:
+                yr = (m.get("release_date") or "")[:4]
+                lines.append(f" • {m.get('title')} ({yr}) ⭐{m.get('vote_average', 0):.1f}")
+        if new_tv:
+            lines.append(f"\n📺 <b>New Episodes Airing ({len(new_tv)}):</b>")
+            for t in new_tv[:5]:
+                yr = (t.get("first_air_date") or "")[:4]
+                lines.append(f" • {t.get('name')} ({yr}) ⭐{t.get('vote_average', 0):.1f}")
+        lines.append(f"\n🔗 {os.environ.get('PROJECT_PUBLIC_URL', 'https://<DOMAIN>')}")
+        tg_send("\n".join(lines))
+        print(f"[sync] TG notified: {total_new} new")
+    else:
+        print("[sync] no new content")
+
+if __name__ == "__main__":
+    main()

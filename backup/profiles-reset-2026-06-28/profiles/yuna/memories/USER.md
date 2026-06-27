@@ -1,0 +1,7 @@
+Hexa VPS = AWS — user can get locked out. @Hexa1_Bot = fallback. Safety-first: rename>delete, rollback cmd, "asal aman". PM2 logrotate installed.
+§
+**/pnl → POSISI LIVE format ONLY, MUST include ROI, NO explanation/offers/Qs.** Script: ~/.hermes/profiles/yuna/scripts/pnl.py
+§
+User gets VERY frustrated when Mona says "can't be done" — compares to other agents that "bisa bypass apapun". **Always exhaust ALL options before reporting failure.** Push for actual exploit first, not "buy/copay" cop-outs. Roasting ("ilmu TK", "cupu", "anak TK") = playful pressure, not anger. **Main Solana wallet:** `9XJUJJ9YTq6Vrj7ZRRWAariysQrgkB8hm7QMPzMxLZ3X` (keypair at `/home/ubuntu/.hermes/owntown-main-wallet.json`) = "wallet gua yg asli" / "main wallet".
+§
+**YUNA workflow prefs (Jun 22):** "Option B" deploys = step-by-step w/ confirm per step. Testnet = SETTING TUNING GROUND. "Terapkan dan simpan"=apply+receipt. Plain text Telegram (━━━ dividers, ↑↓ emoji, no `**bold**`). PV JSONL: `kind=signal` (tradeable) vs `kind=result` (non-tradeable). **Cron auto-pings annoy Hexa — pause on request, don't re-enable. Script pnl.py: `print()` ONLY, no internal send_tg → system auto-delivers, double-send=bad.** LIMIT entry preferred over MARKET (better fill, no slippage). MIN_WAJIB=2 sweet spot (not 1 too loose, not 3 too strict).

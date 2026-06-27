@@ -1,0 +1,9 @@
+{
+  "last_report_path": "/home/ubuntu/.hermes/profiles/soyu/logs/curator/20260624-003402",
+  "last_run_at": "2026-06-24T00:34:02.715486+00:00",
+  "last_run_duration_seconds": 861.845888,
+  "last_run_summary": "auto: no changes; llm: ## Consolidation Summary\n\n**10 skills archived, 4 class-level umbrellas remain.**\n\n### Clusters Processed\n\n**Cluster 1: hermes-agent umbrella** (6 absorbed)\nThe hermes-agent skill is the natural umbrella for everything about configuring, ex…\narchived 10 skill(s):\n  • agent-self-update → hermes-agent\n  • ai-image-generation → hermes-agent\n  • hermes-multi-profile-setup → hermes-agent\n  • mona-emotional-intelligence → mona-command-center\n  • mona-knowledge-vault → mona-command-center\n  • openclaw-superagent-framework → hermes-agent\n  • review-discipline → hermes-agent\n  • skill-installation-security → hermes-agent\n  • telegram-bot-management → mona-command-center\n  • vnc-remote-desktop → operator-workspace-bootstrap\nfull report: hermes curator status\nkeep an umbrella stable: hermes curator pin hermes-agent",
+  "last_run_summary_shown_at": "2026-06-02T21:17:10.292352+00:00",
+  "paused": false,
+  "run_count": 3
+}

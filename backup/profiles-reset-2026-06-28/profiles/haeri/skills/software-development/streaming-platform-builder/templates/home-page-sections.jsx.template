@@ -1,0 +1,324 @@
+/**
+ * ICLIX-style Netflix Home Page Section Patterns
+ * Validated 2026-06-13 on ICLIX Premium Redesign v3
+ *
+ * Copy this file into your React Home.jsx and adjust the data sources.
+ * All CSS classes (.cw-card, .genre-row, .original-card, .premium-banner,
+ * .section-head, .ai-badge) are already in the corresponding CSS block
+ * at the bottom of this file.
+ *
+ * Requires: react-router-dom (Link), lucide-react (optional for icons)
+ */
+
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import Hero from '../components/Hero'
+import MovieRow from '../components/MovieRow'
+
+export default function Home() {
+  const [trending, setTrending] = useState([])
+  const [topRated, setTopRated] = useState([])
+  const [popular, setPopular] = useState([])
+  const [popularTV, setPopularTV] = useState([])
+  const [latestMovies, setLatestMovies] = useState([])
+  const [latestTV, setLatestTV] = useState([])
+  const [latestAsian, setLatestAsian] = useState([])
+  const [latestUpdated, setLatestUpdated] = useState(null)
+  const [genres, setGenres] = useState([])
+  const [originals, setOriginals] = useState([])
+  const [continueWatching, setContinueWatching] = useState([])
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    Promise.all([
+      fetch('/api/trending/all/day').then(r => r.json()),
+      fetch('/api/movie/top_rated').then(r => r.json()),
+      fetch('/api/movie/popular').then(r => r.json()),
+      fetch('/api/tv/popular').then(r => r.json()),
+      fetch('/api/latest').then(r => r.json()).catch(() => ({ movies: [], tv: [], asian_releases: [], updated: null })),
+      fetch('/api/genre/movie/list').then(r => r.json()).catch(() => ({ genres: [] })),
+    ]).then(([t, tr, p, tp, l, g]) => {
+      setTrending(t.results || [])
+      setTopRated(tr.results || [])
+      setPopular(p.results || [])
+      setPopularTV(tp.results || [])
+      setLatestMovies(l.movies || [])
+      setLatestTV(l.tv || [])
+      setLatestAsian(l.asian_releases || [])
+      setLatestUpdated(l.updated || null)
+      setGenres((g.genres || []).slice(0, 8))
+      // ICLIX Originals: use top-rated items as a stand-in
+      setOriginals((tr.results || []).slice(0, 10).map(m => ({ ...m, _original: true })))
+      setLoading(false)
+    }).catch(() => setLoading(false))
+  }, [])
+
+  // Load continue watching from localStorage
+  useEffect(() => {
+    try {
+      const hist = JSON.parse(localStorage.getItem('iclix_history') || '[]')
+      setContinueWatching(hist.slice(0, 6))
+    } catch {}
+  }, [])
+
+  const iconForGenre = (name) => {
+    const n = (name || '').toLowerCase()
+    if (n.includes('action')) return '💥'
+    if (n.includes('sci') || n.includes('fant')) return '🚀'
+    if (n.includes('thrill') || n.includes('mystery') || n.includes('crime')) return '🔪'
+    if (n.includes('romance') || n.includes('drama')) return '💔'
+    if (n.includes('comedy')) return '😄'
+    if (n.includes('horror')) return '👻'
+    if (n.includes('anim')) return '🎌'
+    if (n.includes('doc')) return '📽️'
+    if (n.includes('family')) return '👨‍👩‍👧'
+    if (n.includes('music')) return '🎵'
+    if (n.includes('war')) return '⚔️'
+    if (n.includes('history')) return '🏛️'
+    return '🎬'
+  }
+
+  if (loading) return <div className="loading"><div className="spinner" /></div>
+
+  return (
+    <>
+      <Hero items={trending.slice(0, 8)} />
+
+      <div className="home-content">
+
+        {/* ===== Lanjutkan Menonton (Continue Watching) ===== */}
+        {continueWatching.length > 0 && (
+          <div className="section">
+            <div className="section-head">
+              <h2 className="section-title">⏯️ Lanjutkan Menonton</h2>
+              <Link to="/watchlist" className="section-see">Lihat Semua ›</Link>
+            </div>
+            <div className="cw-scroll">
+              {continueWatching.map((it, i) => (
+                <Link key={i} to={it.path || '#'} className="cw-card">
+                  <div className="cw-card-img" style={{ backgroundImage: it.backdrop ? `url(https://image.tmdb.org/t/p/w500${it.backdrop})` : 'none' }} />
+                  <div className="cw-card-content">
+                    <div className="cw-card-title">{it.title || it.name}</div>
+                    <div className="cw-card-time">{it.time || '0:00'}</div>
+                  </div>
+                  <div className="cw-progress">
+                    <div className="cw-progress-fill" style={{ width: `${it.progress || 50}%` }} />
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* ===== Pilihan Untukmu (AI curated) ===== */}
+        {topRated.length > 0 && (
+          <div className="section">
+            <div className="section-head">
+              <h2 className="section-title">
+                Pilihan Untukmu
+                <span className="ai-badge">AI</span>
+              </h2>
+              <Link to="/trending" className="section-see">Lihat Semua ›</Link>
+            </div>
+            <MovieRow title="" items={topRated.slice(0, 10)} mediaType="movie" hideTitle />
+          </div>
+        )}
+
+        {/* ===== Genre circles ===== */}
+        {genres.length > 0 && (
+          <div className="section">
+            <div className="section-head">
+              <h2 className="section-title">🎯 Jelajahi Berdasarkan Genre</h2>
+              <Link to="/genre/28" className="section-see">Lihat Semua ›</Link>
+            </div>
+            <div className="genre-row">
+              {genres.map(g => (
+                <Link key={g.id} to={`/genre/${g.id}`} className="genre-pill">
+                  <div className="genre-circle">{iconForGenre(g.name)}</div>
+                  <div className="genre-name">{g.name}</div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* ===== Existing rows (preserve) ===== */}
+        {latestMovies.length > 0 && (
+          <div className="section">
+            <h2 className="section-title">🆕 Film Terbaru{latestUpdated ? ' • Update ' + formatUpdated(latestUpdated) + ' WIB' : ''}</h2>
+            <MovieRow title="" items={latestMovies.map(m => ({ ...m, media_type: 'movie' }))} mediaType="movie" hideTitle />
+          </div>
+        )}
+
+        {/* ===== ICLIX Originals ===== */}
+        {originals.length > 0 && (
+          <div className="section">
+            <div className="section-head">
+              <h2 className="section-title">⚡ ICLIX Originals</h2>
+              <Link to="/vip" className="section-see">Lihat Semua ›</Link>
+            </div>
+            <div className="originals-row">
+              {originals.map((it, i) => (
+                <Link
+                  key={it.id || i}
+                  to={it.media_type === 'tv' || it.name ? `/tv/${it.id}` : `/movie/${it.id}`}
+                  className="original-card"
+                >
+                  <div className="original-card-bg" style={{
+                    backgroundImage: it.backdrop_path
+                      ? `url(https://image.tmdb.org/t/p/w500${it.backdrop_path})`
+                      : it.poster_path
+                        ? `url(https://image.tmdb.org/t/p/w500${it.poster_path})`
+                        : 'none'
+                  }} />
+                  <div className="original-badge">ICLIX</div>
+                  <div className="original-info">
+                    <div className="original-title">{it.title || it.name}</div>
+                    <div className="original-rating">★ {it.vote_average?.toFixed(1) || '8.5'}</div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {latestTV.length > 0 && (
+          <div className="section">
+            <h2 className="section-title">📺 Series Tayang Sekarang</h2>
+            <MovieRow title="" items={latestTV.map(t => ({ ...t, media_type: 'tv' }))} mediaType="tv" hideTitle />
+          </div>
+        )}
+
+        {latestAsian.length > 0 && (
+          <div className="section">
+            <h2 className="section-title">🌏 Asian Releases</h2>
+            <MovieRow title="" items={latestAsian.map(m => ({ ...m, media_type: 'movie' }))} mediaType="movie" hideTitle />
+          </div>
+        )}
+
+        <div className="section">
+          <h2 className="section-title">🔥 Trending Hari Ini</h2>
+          <MovieRow title="" items={trending} mediaType="movie" hideTitle />
+        </div>
+
+        <div className="section">
+          <h2 className="section-title">⭐ Film Top Rated</h2>
+          <MovieRow title="" items={topRated} mediaType="movie" hideTitle />
+        </div>
+
+        <div className="section">
+          <h2 className="section-title">📡 TV Series Populer</h2>
+          <MovieRow title="" items={popularTV} mediaType="tv" hideTitle />
+        </div>
+
+        {/* ===== Premium banner (page bottom) ===== */}
+        <Link to="/vip" className="premium-banner">
+          <div className="premium-banner-inner">
+            <div className="premium-banner-icon">👑</div>
+            <div className="premium-banner-text">
+              <div className="premium-banner-title">Upgrade ke Premium</div>
+              <div className="premium-banner-sub">
+                Nonton tanpa batas dengan kualitas 4K Dolby Atmos · Rp 5.000/bulan
+              </div>
+            </div>
+            <div className="btn btn-primary">Upgrade</div>
+          </div>
+        </Link>
+      </div>
+    </>
+  )
+}
+
+/* === Required CSS (add to index.css) === */
+/*
+.home-content { padding-top: 8px; padding-bottom: 60px; background: #000; }
+
+.section-head { display: flex; align-items: center; justify-content: space-between; padding: 0 4%; margin-bottom: 12px; }
+.section-head .section-title { padding: 0; margin-bottom: 0; }
+.section-title { font-size: 20px; font-weight: 700; padding: 0 4%; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+.section-see { color: var(--gray); font-size: 13px; font-weight: 500; transition: color .2s; padding: 0 4%; }
+.section-see:hover { color: var(--red); }
+.ai-badge { background: linear-gradient(135deg,#ff1a25,#a00610); padding: 3px 8px; border-radius: 4px; font-size: 10px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 0 12px rgba(229,9,20,.4); color: #fff; }
+
+.cw-scroll { display: flex; gap: 12px; overflow-x: auto; padding: 0 4% 10px; scrollbar-width: none; }
+.cw-scroll::-webkit-scrollbar { display: none; }
+.cw-card { flex-shrink: 0; width: 280px; aspect-ratio: 16/9; border-radius: 10px;
+  background: linear-gradient(135deg,#2a0a0e,#1a0508); position: relative; overflow: hidden;
+  border: 1px solid rgba(255,255,255,.08); transition: transform .2s; text-decoration: none; color: inherit; }
+.cw-card:hover { transform: scale(1.03); border-color: rgba(229,9,20,.4); }
+.cw-card-img { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: .7; }
+.cw-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top,rgba(0,0,0,.9),transparent 60%); }
+.cw-card-content { position: absolute; bottom: 10px; left: 12px; right: 12px; z-index: 2; display: flex; align-items: center; gap: 8px; }
+.cw-card-title { font-size: 12px; font-weight: 600; flex: 1; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; color: #fff; }
+.cw-card-time { font-size: 10px; color: var(--red); font-weight: 700; }
+.cw-progress { position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: rgba(255,255,255,.1); z-index: 3; }
+.cw-progress-fill { height: 100%; background: linear-gradient(135deg,#ff2a3a,#e50914,#a00610); box-shadow: 0 0 8px rgba(229,9,20,.5); }
+
+.genre-row { display: flex; gap: 18px; overflow-x: auto; padding: 8px 4% 16px; scrollbar-width: none; }
+.genre-row::-webkit-scrollbar { display: none; }
+.genre-pill { flex-shrink: 0; width: 84px; text-align: center; cursor: pointer; text-decoration: none; color: inherit; }
+.genre-circle { width: 72px; height: 72px; border-radius: 50%;
+  background: linear-gradient(135deg,rgba(229,9,20,.2),rgba(229,9,20,.05));
+  border: 1px solid rgba(229,9,20,.3); display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 8px; font-size: 30px; transition: all .2s; }
+.genre-pill:hover .genre-circle { background: linear-gradient(135deg,rgba(229,9,20,.4),rgba(229,9,20,.15));
+  transform: scale(1.05); box-shadow: 0 0 20px rgba(229,9,20,.3); border-color: rgba(229,9,20,.6); }
+.genre-name { font-size: 11px; font-weight: 500; color: #d2d2d2; }
+
+.originals-row { display: flex; gap: 12px; overflow-x: auto; padding: 0 4% 10px; scrollbar-width: none; }
+.originals-row::-webkit-scrollbar { display: none; }
+.original-card { flex-shrink: 0; width: 160px; aspect-ratio: 2/3; border-radius: 12px;
+  position: relative; overflow: hidden; cursor: pointer; text-decoration: none; color: inherit;
+  background: #0a0a0a; border: 1px solid rgba(255,255,255,.08); transition: all .2s; }
+.original-card:hover { transform: scale(1.05); border-color: rgba(229,9,20,.4); box-shadow: 0 8px 24px -8px rgba(229,9,20,.4); }
+.original-card-bg { position: absolute; inset: 0; background-size: cover; background-position: center; background-color: #0a0a0a; }
+.original-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top,rgba(0,0,0,.95) 0%,rgba(0,0,0,.3) 50%,transparent 80%); }
+.original-badge { position: absolute; top: 10px; left: 10px; z-index: 2;
+  background: rgba(0,0,0,.75); backdrop-filter: blur(8px); border: 1px solid var(--red);
+  padding: 4px 8px; border-radius: 4px; font-size: 9px; font-weight: 800; letter-spacing: 1.5px;
+  color: var(--red); text-transform: uppercase; }
+.original-info { position: absolute; bottom: 10px; left: 10px; right: 10px; z-index: 2; }
+.original-title { font-size: 12px; font-weight: 700; margin-bottom: 3px; line-height: 1.2;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; color: #fff; }
+.original-rating { font-size: 11px; color: #f5c518; font-weight: 700; }
+
+.premium-banner { margin: 32px 4% 24px; padding: 24px; border-radius: 16px;
+  background: linear-gradient(135deg,rgba(229,9,20,.15),rgba(160,6,16,.05));
+  border: 1px solid rgba(229,9,20,.3); position: relative; overflow: hidden;
+  text-decoration: none; color: inherit; display: block; }
+.premium-banner::before { content: ''; position: absolute; top: -50%; right: -20%;
+  width: 240px; height: 240px; background: radial-gradient(circle,rgba(229,9,20,.5) 0%,transparent 70%);
+  filter: blur(40px); }
+.premium-banner-inner { position: relative; z-index: 2; display: flex; align-items: center; gap: 16px; }
+.premium-banner-icon { width: 56px; height: 56px; border-radius: 14px;
+  background: linear-gradient(135deg,#ff2a3a,#e50914,#a00610);
+  display: flex; align-items: center; justify-content: center; font-size: 28px;
+  box-shadow: 0 6px 20px rgba(229,9,20,.5); flex-shrink: 0; }
+.premium-banner-text { flex: 1; min-width: 0; }
+.premium-banner-title { font-size: 16px; font-weight: 800; margin-bottom: 4px; letter-spacing: -.2px; color: #fff; }
+.premium-banner-sub { font-size: 12px; color: var(--gray); line-height: 1.4; }
+.premium-banner .btn { padding: 12px 20px; font-size: 13px; flex-shrink: 0; }
+*/
+
+/* === Required MovieRow.jsx update (add hideTitle prop) === */
+/*
+export default function MovieRow({ title, items, mediaType, highlight, hideTitle }) {
+  const ref = useRef()
+  const scroll = (dir) => { if (ref.current) ref.current.scrollLeft += dir * 800 }
+  if (!items?.length) return null
+  return (
+    <div className={`section ${highlight === 'latest' ? 'section-latest' : ''}`}>
+      {!hideTitle && title && <h2 className="section-title">{title}</h2>}
+      <div className="row-container">
+        <button className="row-arrow left" onClick={()=>scroll(-1)}>‹</button>
+        <div className="row-scroll" ref={ref}>
+          {items.map(item => (
+            <MovieCard key={item.id} item={item} mediaType={mediaType || item.media_type} />
+          ))}
+        </div>
+        <button className="row-arrow right" onClick={()=>scroll(1)}>›</button>
+      </div>
+    </div>
+  )
+}
+*/

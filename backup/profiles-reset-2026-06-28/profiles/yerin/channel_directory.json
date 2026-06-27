@@ -1,0 +1,43 @@
+{
+  "updated_at": "2026-06-21T20:38:31.314545",
+  "platforms": {
+    "telegram": [
+      {
+        "id": "1492210461",
+        "name": "0xjosee",
+        "type": "dm",
+        "thread_id": null
+      },
+      {
+        "id": "-1003899936547:2907",
+        "name": "PROJECT VIOLET / topic 2907",
+        "type": "group",
+        "thread_id": "2907"
+      }
+    ],
+    "discord": [],
+    "whatsapp": [],
+    "slack": [],
+    "signal": [],
+    "mattermost": [],
+    "matrix": [],
+    "homeassistant": [],
+    "email": [],
+    "sms": [],
+    "dingtalk": [],
+    "msgraph_webhook": [],
+    "feishu": [],
+    "wecom": [],
+    "wecom_callback": [],
+    "weixin": [],
+    "bluebubbles": [],
+    "qqbot": [],
+    "yuanbao": [],
+    "google_chat": [],
+    "irc": [],
+    "line": [],
+    "ntfy": [],
+    "simplex": [],
+    "teams": []
+  }
+}

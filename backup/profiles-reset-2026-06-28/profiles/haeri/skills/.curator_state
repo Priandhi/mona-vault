@@ -1,0 +1,9 @@
+{
+  "last_report_path": "/home/ubuntu/.hermes/profiles/haeri/logs/curator/20260617-001809",
+  "last_run_at": "2026-06-17T00:18:09.074552+00:00",
+  "last_run_duration_seconds": 1151.534041,
+  "last_run_summary": "auto: no changes; llm: Now let me write the final response with the human summary and YAML block.\n\n# Curator Pass Summary — June 2026\n\n## What I did\n\nI scanned all 68 agent-created skills and the surrounding bundled built-ins, identified 10 major prefix clusters,…\narchived 39 skill(s):\n  • alpha-hunter-new-token-discovery → hermes-crypto-agent\n  • claude-code-mimo-setup → hermes-multi-profile-setup\n  • hermes-web-search-fix → hermes-web-search-config\n  • binance-futures-trading — pruned (stale)\n  • browser-automation-vps — pruned (stale)\n  • charon-sniper-bot — pruned (stale)\n  • claude-code — pruned (stale)\n  • cloakbrowser-setup — pruned (stale)\n  • codebase-inspection — pruned (stale)\n  • codex — pruned (stale)\n  … and 29 more\nfull report: hermes curator status\nkeep an umbrella stable: hermes curator pin hermes-crypto-agent",
+  "last_run_summary_shown_at": "2026-06-02T21:17:10.292352+00:00",
+  "paused": false,
+  "run_count": 2
+}

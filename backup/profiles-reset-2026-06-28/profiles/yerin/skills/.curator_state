@@ -1,0 +1,9 @@
+{
+  "last_report_path": "/home/ubuntu/.hermes/profiles/yerin/logs/curator/20260617-001809",
+  "last_run_at": "2026-06-17T00:18:09.281167+00:00",
+  "last_run_duration_seconds": 1391.223878,
+  "last_run_summary": "auto: no changes; llm: ## Curator Pass Summary\n\n**22 archives, 7 clusters processed, 2 new umbrellas created, 5 existing umbrellas extended.**\n\n### Clusters processed\n\n**1. Crypto cluster (7 skills → 1 umbrella)** — the big win\n- All 7 narrow skills absorbed into…\narchived 22 skill(s):\n  • alpha-hunter-new-token-discovery → hermes-crypto-agent\n  • crypto-data-scrapers → hermes-crypto-agent\n  • galxe-reverse-engineering → hermes-crypto-agent\n  • gandalf-level-8 → hermes-crypto-agent\n  • gpu-cloud-mining → hermes-crypto-agent\n  • vps-mining-setup → hermes-crypto-agent\n  • web3-game-bypass-recon → hermes-crypto-agent\n  • claude-code-mimo-setup — pruned (stale)\n  • github-auth — pruned (stale)\n  • github-code-review — pruned (stale)\n  … and 12 more\nfull report: hermes curator status\nkeep an umbrella stable: hermes curator pin hermes-crypto-agent",
+  "last_run_summary_shown_at": "2026-06-02T21:17:10.292352+00:00",
+  "paused": false,
+  "run_count": 2
+}

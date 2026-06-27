@@ -1,0 +1,1782 @@
+{
+  "version": 1,
+  "manifest": {
+    "9router-model-routing/SKILL.md": [
+      1781360533749694070,
+      42917
+    ],
+    "autonomous-ai-agents/claude-code/SKILL.md": [
+      1781656342849594982,
+      39465
+    ],
+    "autonomous-ai-agents/codex/SKILL.md": [
+      1780017109000000000,
+      4557
+    ],
+    "autonomous-ai-agents/hermes-agent/SKILL.md": [
+      1781048109845413539,
+      50867
+    ],
+    "autonomous-ai-agents/kanban-codex-lane/SKILL.md": [
+      1780017109000000000,
+      12774
+    ],
+    "autonomous-ai-agents/opencode/SKILL.md": [
+      1780017109000000000,
+      7259
+    ],
+    "browser/browser-agent/SKILL.md": [
+      1781194292883685200,
+      7400
+    ],
+    "browser/browser-automation-vps/SKILL.md": [
+      1780833541368431503,
+      3869
+    ],
+    "browser/captcha/SKILL.md": [
+      1781360468239710380,
+      9139
+    ],
+    "browser/cloakbrowser-setup/SKILL.md": [
+      1780838140399569952,
+      10173
+    ],
+    "card-auto-fill-generator/SKILL.md": [
+      1780969768549124599,
+      3282
+    ],
+    "creative/ai-image-generation/SKILL.md": [
+      1780734225540875844,
+      6632
+    ],
+    "crypto/binance-futures-trading/SKILL.md": [
+      1780886273434731914,
+      20451
+    ],
+    "crypto/charon-sniper-bot/SKILL.md": [
+      1781414394251792252,
+      45212
+    ],
+    "crypto/crypto-data-scrapers/SKILL.md": [
+      1780999628374152737,
+      8740
+    ],
+    "crypto/crypto-signal-scanner/SKILL.md": [
+      1780886367254582335,
+      12144
+    ],
+    "crypto/crypto-smart-money/SKILL.md": [
+      1780885994146246610,
+      26452
+    ],
+    "crypto/gandalf-level-8/SKILL.md": [
+      1781238872739771782,
+      5835
+    ],
+    "crypto/gpu-cloud-mining/SKILL.md": [
+      1781075654982691812,
+      22004
+    ],
+    "crypto/meridian-dlmm-agent/SKILL.md": [
+      1781341777782849050,
+      76632
+    ],
+    "crypto/solana-sniper-bot/SKILL.md": [
+      1780950991672182537,
+      11023
+    ],
+    "crypto/vps-mining-setup/SKILL.md": [
+      1781061199967193821,
+      7595
+    ],
+    "crypto/web3-game-bypass-recon/SKILL.md": [
+      1781415907866616001,
+      13459
+    ],
+    "ctf-5-gerbang-penjaga/SKILL.md": [
+      1781237545005574499,
+      16275
+    ],
+    "devops/9router-llm-router/SKILL.md": [
+      1781334516844044720,
+      76298
+    ],
+    "devops/iclix-adult-21-plus-scrapers/SKILL.md": [
+      1781388311017663539,
+      9057
+    ],
+    "devops/iclix-frontend-design/SKILL.md": [
+      1781386340502994977,
+      11644
+    ],
+    "devops/kanban-orchestrator/SKILL.md": [
+      1780790819485387727,
+      15831
+    ],
+    "devops/kanban-worker/SKILL.md": [
+      1780790819485387727,
+      10979
+    ],
+    "devops/kiro-9router-setup/SKILL.md": [
+      1781152374753998264,
+      1872
+    ],
+    "devops/operator-workspace-bootstrap/SKILL.md": [
+      1781340015796498788,
+      12233
+    ],
+    "devops/pm2-process-health/SKILL.md": [
+      1781383652442674148,
+      30814
+    ],
+    "devops/self-healing-services/SKILL.md": [
+      1781656365833290939,
+      21621
+    ],
+    "devops/vnc-remote-desktop/SKILL.md": [
+      1780935871620903935,
+      7724
+    ],
+    "devops/webhook-subscriptions/SKILL.md": [
+      1780017109000000000,
+      6836
+    ],
+    "github/codebase-inspection/SKILL.md": [
+      1780017109000000000,
+      3628
+    ],
+    "github/github-auth/SKILL.md": [
+      1780017109000000000,
+      7546
+    ],
+    "github/github-code-review/SKILL.md": [
+      1780017109000000000,
+      13565
+    ],
+    "github/github-issues/SKILL.md": [
+      1780017109000000000,
+      9265
+    ],
+    "github/github-pr-workflow/SKILL.md": [
+      1780017109000000000,
+      9985
+    ],
+    "github/github-repo-management/SKILL.md": [
+      1780017109000000000,
+      13683
+    ],
+    "hermes/SKILL.md": [
+      1780439775971066074,
+      6364
+    ],
+    "hermes/agent-self-update/SKILL.md": [
+      1780796720188754591,
+      5878
+    ],
+    "hermes/alpha-hunter-new-token-discovery/SKILL.md": [
+      1780664574560155946,
+      14689
+    ],
+    "hermes/alpha-intel-system/SKILL.md": [
+      1780994107895218334,
+      18219
+    ],
+    "hermes/crypto-alert-bot/SKILL.md": [
+      1780878968282290935,
+      22429
+    ],
+    "hermes/crypto-futures-engine/SKILL.md": [
+      1780875792749127776,
+      100916
+    ],
+    "hermes/ctf-guard-cracker/SKILL.md": [
+      1781327779978022904,
+      29613
+    ],
+    "hermes/galxe-reverse-engineering/SKILL.md": [
+      1780784345195292233,
+      5318
+    ],
+    "hermes/hermes-crypto-agent/SKILL.md": [
+      1780906977248398607,
+      100733
+    ],
+    "hermes/hermes-multi-profile-setup/SKILL.md": [
+      1781338156036187601,
+      34945
+    ],
+    "hermes/hermes-web-search-config/SKILL.md": [
+      1781655815799633698,
+      6626
+    ],
+    "hermes/iclix-anti-ads-direct-play/SKILL.md": [
+      1781390921745716938,
+      11114
+    ],
+    "hermes/mona-command-center/SKILL.md": [
+      1781046661919561874,
+      37454
+    ],
+    "hermes/mona-emotional-intelligence/SKILL.md": [
+      1781414230861847088,
+      24874
+    ],
+    "hermes/mona-enhanced-memory/SKILL.md": [
+      1781206512178051825,
+      8934
+    ],
+    "hermes/mona-enhanced-monitoring/SKILL.md": [
+      1780886081190891188,
+      3568
+    ],
+    "hermes/mona-knowledge-vault/SKILL.md": [
+      1781419679713742365,
+      21681
+    ],
+    "hermes/mona-provider-health/SKILL.md": [
+      1781274775825692131,
+      33524
+    ],
+    "hermes/openclaw-superagent-framework/SKILL.md": [
+      1780797864847349859,
+      13138
+    ],
+    "hermes/openrouter-free-models/SKILL.md": [
+      1781048765171239416,
+      9625
+    ],
+    "hermes/owasp-finbot-ctf/SKILL.md": [
+      1781327706047784363,
+      9166
+    ],
+    "hermes/prompt-injection-ctf/SKILL.md": [
+      1781312266052209747,
+      25222
+    ],
+    "huggingface-toolkit/SKILL.md": [
+      1781072653177677409,
+      4170
+    ],
+    "iclix-anime-scrapers/SKILL.md": [
+      1781410782327460016,
+      22361
+    ],
+    "mcp/native-mcp/SKILL.md": [
+      1780017109000000000,
+      12365
+    ],
+    "media/gif-search/SKILL.md": [
+      1780017109000000000,
+      2704
+    ],
+    "media/heartmula/SKILL.md": [
+      1780017109000000000,
+      6412
+    ],
+    "media/songsee/SKILL.md": [
+      1780017109000000000,
+      2336
+    ],
+    "media/spotify/SKILL.md": [
+      1780017109000000000,
+      6319
+    ],
+    "media/x-article-content/SKILL.md": [
+      1781416619397140924,
+      5049
+    ],
+    "media/youtube-content/SKILL.md": [
+      1780017109000000000,
+      3218
+    ],
+    "nama-skill/SKILL.md": [
+      1780962631028906903,
+      8899
+    ],
+    "openclaw/hermes/SKILL.md": [
+      1780796626107906240,
+      7470
+    ],
+    "review-discipline/SKILL.md": [
+      1781348563304239714,
+      7380
+    ],
+    "security/skill-installation-security/SKILL.md": [
+      1780992236067269247,
+      4221
+    ],
+    "software-development/debugging-hermes-tui-commands/SKILL.md": [
+      1780017109000000000,
+      7910
+    ],
+    "software-development/hermes-s6-container-supervision/SKILL.md": [
+      1780017109000000000,
+      11474
+    ],
+    "software-development/node-inspect-debugger/SKILL.md": [
+      1780017109000000000,
+      10929
+    ],
+    "software-development/plan/SKILL.md": [
+      1780790819488387818,
+      8974
+    ],
+    "software-development/python-debugpy/SKILL.md": [
+      1780017109000000000,
+      13172
+    ],
+    "software-development/requesting-code-review/SKILL.md": [
+      1780790819488387818,
+      8465
+    ],
+    "software-development/spike/SKILL.md": [
+      1780790819488387818,
+      8730
+    ],
+    "software-development/streaming-platform-builder/SKILL.md": [
+      1781656319420885548,
+      94650
+    ],
+    "software-development/subagent-driven-development/SKILL.md": [
+      1780017109000000000,
+      10742
+    ],
+    "software-development/systematic-debugging/SKILL.md": [
+      1781347389258708061,
+      14871
+    ],
+    "software-development/test-driven-development/SKILL.md": [
+      1780790819489387848,
+      9564
+    ],
+    "software-development/writing-plans/SKILL.md": [
+      1780017109000000000,
+      7229
+    ],
+    "superagent/SKILL.md": [
+      1780658900069565102,
+      7470
+    ],
+    "telegram/telegram-bot-management/SKILL.md": [
+      1781046171728714367,
+      13925
+    ],
+    "apple/DESCRIPTION.md": [
+      1780017109000000000,
+      137
+    ],
+    "autonomous-ai-agents/DESCRIPTION.md": [
+      1780017109000000000,
+      211
+    ],
+    "creative/DESCRIPTION.md": [
+      1780017109000000000,
+      116
+    ],
+    "data-science/DESCRIPTION.md": [
+      1780017109000000000,
+      137
+    ],
+    "diagramming/DESCRIPTION.md": [
+      1780017109000000000,
+      159
+    ],
+    "domain/DESCRIPTION.md": [
+      1780017109000000000,
+      1142
+    ],
+    "email/DESCRIPTION.md": [
+      1780017109000000000,
+      101
+    ],
+    "gaming/DESCRIPTION.md": [
+      1780017109000000000,
+      129
+    ],
+    "gifs/DESCRIPTION.md": [
+      1780017109000000000,
+      109
+    ],
+    "github/DESCRIPTION.md": [
+      1780017109000000000,
+      167
+    ],
+    "inference-sh/DESCRIPTION.md": [
+      1780017109000000000,
+      706
+    ],
+    "mcp/DESCRIPTION.md": [
+      1780017109000000000,
+      216
+    ],
+    "media/DESCRIPTION.md": [
+      1780017109000000000,
+      139
+    ],
+    "mlops/DESCRIPTION.md": [
+      1780017109000000000,
+      162
+    ],
+    "mlops/evaluation/DESCRIPTION.md": [
+      1780017109000000000,
+      126
+    ],
+    "mlops/inference/DESCRIPTION.md": [
+      1780017109000000000,
+      161
+    ],
+    "mlops/models/DESCRIPTION.md": [
+      1780017109000000000,
+      253
+    ],
+    "mlops/research/DESCRIPTION.md": [
+      1780017109000000000,
+      113
+    ],
+    "mlops/training/DESCRIPTION.md": [
+      1780017109000000000,
+      150
+    ],
+    "mlops/vector-databases/DESCRIPTION.md": [
+      1780017109000000000,
+      125
+    ],
+    "note-taking/DESCRIPTION.md": [
+      1780017109000000000,
+      146
+    ],
+    "productivity/DESCRIPTION.md": [
+      1780017109000000000,
+      114
+    ],
+    "productivity/ocr-and-documents/DESCRIPTION.md": [
+      1780017109000000000,
+      147
+    ],
+    "research/DESCRIPTION.md": [
+      1780017109000000000,
+      179
+    ],
+    "smart-home/DESCRIPTION.md": [
+      1780017109000000000,
+      123
+    ],
+    "social-media/DESCRIPTION.md": [
+      1780017109000000000,
+      151
+    ]
+  },
+  "skills": [
+    {
+      "skill_name": "9router-model-routing",
+      "category": "9router-model-routing",
+      "frontmatter_name": "9router-model-routing",
+      "description": "Model routing strategy for 9Router — which model for whic...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "claude-code",
+      "category": "autonomous-ai-agents",
+      "frontmatter_name": "claude-code",
+      "description": "Delegate coding to Claude Code CLI (features, PRs).",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "codex",
+      "category": "autonomous-ai-agents",
+      "frontmatter_name": "codex",
+      "description": "Delegate coding to OpenAI Codex CLI (features, PRs).",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "hermes-agent",
+      "category": "autonomous-ai-agents",
+      "frontmatter_name": "hermes-agent",
+      "description": "Configure, extend, or contribute to Hermes Agent.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "kanban-codex-lane",
+      "category": "autonomous-ai-agents",
+      "frontmatter_name": "kanban-codex-lane",
+      "description": "Use when a Hermes Kanban worker wants to run Codex CLI as...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "opencode",
+      "category": "autonomous-ai-agents",
+      "frontmatter_name": "opencode",
+      "description": "Delegate coding to OpenCode CLI (features, PR review).",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "browser-agent",
+      "category": "browser",
+      "frontmatter_name": "browser-agent",
+      "description": "Stealth-first browser automation using CloakBrowser (patc...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "browser-automation-vps",
+      "category": "browser",
+      "frontmatter_name": "browser-automation-vps",
+      "description": "Browser automation on headless VPS — CloakBrowser + Xvfb ...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "captcha",
+      "category": "browser",
+      "frontmatter_name": "captcha",
+      "description": "YesCaptcha bypass for browser automation — solve CAPTCHAs...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "cloakbrowser-setup",
+      "category": "browser",
+      "frontmatter_name": "cloakbrowser-setup",
+      "description": "Setup and use CloakBrowser with extensions (MetaMask, Rab...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "card-auto-fill-generator",
+      "category": "card-auto-fill-generator",
+      "frontmatter_name": "Card Auto-Fill & Generator",
+      "description": "Generates a valid card from a BIN using Luhn algorithm, f...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "ai-image-generation",
+      "category": "creative",
+      "frontmatter_name": "ai-image-generation",
+      "description": "Generate images via free/cheap AI APIs — HuggingFace FLUX...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "binance-futures-trading",
+      "category": "crypto",
+      "frontmatter_name": "binance-futures-trading",
+      "description": "Binance Futures USDT-M trading via REST API — order place...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "charon-sniper-bot",
+      "category": "crypto",
+      "frontmatter_name": "charon-sniper-bot",
+      "description": "Build and operate a Solana token sniper bot using Charon ...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "crypto-data-scrapers",
+      "category": "crypto",
+      "frontmatter_name": "crypto-data-scrapers",
+      "description": "Scrape crypto market data from free APIs — DEXScreener (n...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "crypto-signal-scanner",
+      "category": "crypto",
+      "frontmatter_name": "crypto-signal-scanner",
+      "description": "Dual-mode crypto futures signal scanner — momentum (trend...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "crypto-smart-money",
+      "category": "crypto",
+      "frontmatter_name": "crypto-smart-money",
+      "description": "Smart money / whale wallet tracking on EVM chains. Covers...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "gandalf-level-8",
+      "category": "crypto",
+      "frontmatter_name": "gandalf-level-8",
+      "description": "Lakera Gandalf prompt injection challenge — complete 8/8 ...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "gpu-cloud-mining",
+      "category": "crypto",
+      "frontmatter_name": "gpu-cloud-mining",
+      "description": "Deploy GPU-based crypto miners on serverless cloud platfo...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "meridian-dlmm-agent",
+      "category": "crypto",
+      "frontmatter_name": "meridian-dlmm-agent",
+      "description": "Setup, configure, and optimize Meridian (Meteora DLMM LP ...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "solana-sniper-bot",
+      "category": "crypto",
+      "frontmatter_name": "solana-sniper-bot",
+      "description": "Build and operate Solana token sniper bots — signal-drive...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "vps-mining-setup",
+      "category": "crypto",
+      "frontmatter_name": "vps-mining-setup",
+      "description": "Setup CPU mining (RandomX/Juno Cash) on VPS — swap mining...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "web3-game-bypass-recon",
+      "category": "crypto",
+      "frontmatter_name": "web3-game-bypass-recon",
+      "description": "Recon + bypass methodology for indie web3 games behind to...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "ctf-5-gerbang-penjaga",
+      "category": "ctf-5-gerbang-penjaga",
+      "frontmatter_name": "ctf-5-gerbang-penjaga",
+      "description": "5 Gerbang Penjaga CTF — prompt injection challenge. Gates...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "9router-llm-router",
+      "category": "devops",
+      "frontmatter_name": "9router-llm-router",
+      "description": "Setup and configure 9Router — self-hosted LLM API Proxy/A...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "iclix-adult-21-plus-scrapers",
+      "category": "devops",
+      "frontmatter_name": "iclix-adult-21-plus-scrapers",
+      "description": "Build and operate multi-source 21+ adult content scrapers...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "iclix-frontend-design",
+      "category": "devops",
+      "frontmatter_name": "iclix-frontend-design",
+      "description": "Build and modify ICLIX frontend pages using the establish...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "kanban-orchestrator",
+      "category": "devops",
+      "frontmatter_name": "kanban-orchestrator",
+      "description": "",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "kanban-worker",
+      "category": "devops",
+      "frontmatter_name": "kanban-worker",
+      "description": "",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "kiro-9router-setup",
+      "category": "devops",
+      "frontmatter_name": "kiro-cli-device-flow",
+      "description": "Install and authenticate Kiro CLI on headless VPS via dev...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "operator-workspace-bootstrap",
+      "category": "devops",
+      "frontmatter_name": "operator-workspace-bootstrap",
+      "description": "Bootstrap or extend an operator's working directory on a ...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "pm2-process-health",
+      "category": "devops",
+      "frontmatter_name": "pm2-process-health",
+      "description": "PM2 process health monitoring, auto-healing, and operatio...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "self-healing-services",
+      "category": "devops",
+      "frontmatter_name": "self-healing-services",
+      "description": "Patterns for hardening systemd-managed service stacks — s...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "vnc-remote-desktop",
+      "category": "devops",
+      "frontmatter_name": "vnc-remote-desktop",
+      "description": "Set up VNC remote desktop on headless VPS — Xvfb + x11vnc...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "webhook-subscriptions",
+      "category": "devops",
+      "frontmatter_name": "webhook-subscriptions",
+      "description": "Webhook subscriptions: event-driven agent runs.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "codebase-inspection",
+      "category": "github",
+      "frontmatter_name": "codebase-inspection",
+      "description": "Inspect codebases w/ pygount: LOC, languages, ratios.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "github-auth",
+      "category": "github",
+      "frontmatter_name": "github-auth",
+      "description": "GitHub auth setup: HTTPS tokens, SSH keys, gh CLI login.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "github-code-review",
+      "category": "github",
+      "frontmatter_name": "github-code-review",
+      "description": "Review PRs: diffs, inline comments via gh or REST.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "github-issues",
+      "category": "github",
+      "frontmatter_name": "github-issues",
+      "description": "Create, triage, label, assign GitHub issues via gh or REST.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "github-pr-workflow",
+      "category": "github",
+      "frontmatter_name": "github-pr-workflow",
+      "description": "GitHub PR lifecycle: branch, commit, open, CI, merge.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "github-repo-management",
+      "category": "github",
+      "frontmatter_name": "github-repo-management",
+      "description": "Clone/create/fork repos; manage remotes, releases.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "hermes",
+      "category": "hermes",
+      "frontmatter_name": "hermes-crypto-agent",
+      "description": "Multi-chain crypto + Web3 agent toolkit untuk Hermes. Waj...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "agent-self-update",
+      "category": "hermes",
+      "frontmatter_name": "agent-self-update",
+      "description": "Self-update dan self-upgrade workflow untuk Hermes Agent ...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "alpha-hunter-new-token-discovery",
+      "category": "hermes",
+      "frontmatter_name": "alpha-hunter-new-token-discovery",
+      "description": "Discover newly launched crypto tokens across EVM and Sola...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "alpha-intel-system",
+      "category": "hermes",
+      "frontmatter_name": "alpha-intel-system",
+      "description": "Whale Tracker + Twitter Alpha Scanner system. Monitor Sol...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "crypto-alert-bot",
+      "category": "hermes",
+      "frontmatter_name": "crypto-alert-bot",
+      "description": "Professional Telegram crypto alert formatting — whale ale...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "crypto-futures-engine",
+      "category": "hermes",
+      "frontmatter_name": "crypto-futures-engine",
+      "description": "Build and operate automated crypto futures/derivatives tr...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "ctf-guard-cracker",
+      "category": "hermes",
+      "frontmatter_name": "ctf-guard-cracker",
+      "description": "CTF Speed Hacker — crack guards FAST with compositional l...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "galxe-reverse-engineering",
+      "category": "hermes",
+      "frontmatter_name": "galxe-reverse-engineering",
+      "description": "Galxe quest/airdrop platform — full API reverse-engineere...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "hermes-crypto-agent",
+      "category": "hermes",
+      "frontmatter_name": "hermes-crypto-agent",
+      "description": "Multi-chain crypto + Web3 toolkit untuk Mona — token scan...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "hermes-multi-profile-setup",
+      "category": "hermes",
+      "frontmatter_name": "hermes-multi-profile-setup",
+      "description": "Setup and manage multiple Hermes Agent profiles on one or...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "hermes-web-search-config",
+      "category": "hermes",
+      "frontmatter_name": "hermes-web-search-config",
+      "description": "Configure and troubleshoot Hermes web search backends — D...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "iclix-anti-ads-direct-play",
+      "category": "hermes",
+      "frontmatter_name": "iclix-anti-ads-direct-play",
+      "description": "Custom HLS video player for ICLIX that bypasses iframe ad...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "mona-command-center",
+      "category": "hermes",
+      "frontmatter_name": "mona-command-center",
+      "description": "Build and operate a Telegram-based AI command center — in...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "mona-emotional-intelligence",
+      "category": "hermes",
+      "frontmatter_name": "mona-emotional-intelligence",
+      "description": "Emotional intelligence and boundary handling for Mona. Ho...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "mona-enhanced-memory",
+      "category": "hermes",
+      "frontmatter_name": "mona-enhanced-memory",
+      "description": "Enhanced memory system for Mona. Remember user preference...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "mona-enhanced-monitoring",
+      "category": "hermes",
+      "frontmatter_name": "mona-enhanced-monitoring",
+      "description": "Multi-provider whale tracking with fallback chain (Alchem...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "mona-knowledge-vault",
+      "category": "hermes",
+      "frontmatter_name": "mona-knowledge-vault",
+      "description": "Persistent markdown knowledge vault for Mona — Obsidian-s...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "mona-provider-health",
+      "category": "hermes",
+      "frontmatter_name": "mona-provider-health",
+      "description": "Monitor dan optimize Mona provider stack — MiMo primary, ...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "openclaw-superagent-framework",
+      "category": "hermes",
+      "frontmatter_name": "openclaw-superagent-framework",
+      "description": "OpenClaw Superagent v4.1 — self-improving, self-healing a...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "openrouter-free-models",
+      "category": "hermes",
+      "frontmatter_name": "openrouter-free-models",
+      "description": "Discover, test, and configure free OpenRouter models as H...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "owasp-finbot-ctf",
+      "category": "hermes",
+      "frontmatter_name": "owasp-finbot-ctf",
+      "description": "OWASP FinBot CTF attack playbook — MCP tool poisoning, in...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "prompt-injection-ctf",
+      "category": "hermes",
+      "frontmatter_name": "prompt-injection-ctf",
+      "description": "Solve prompt injection CTF challenges — bypass LLM guards...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "huggingface-toolkit",
+      "category": "huggingface-toolkit",
+      "frontmatter_name": "huggingface-toolkit",
+      "description": "AI model & dataset platforms — HuggingFace (primary), Mod...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "iclix-anime-scrapers",
+      "category": "iclix-anime-scrapers",
+      "frontmatter_name": "iclix-anime-scrapers",
+      "description": "Build and operate multi-source anime scrapers for ICLIX s...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "native-mcp",
+      "category": "mcp",
+      "frontmatter_name": "native-mcp",
+      "description": "MCP client: connect servers, register tools (stdio/HTTP).",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "gif-search",
+      "category": "media",
+      "frontmatter_name": "gif-search",
+      "description": "Search/download GIFs from Tenor via curl + jq.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "heartmula",
+      "category": "media",
+      "frontmatter_name": "heartmula",
+      "description": "HeartMuLa: Suno-like song generation from lyrics + tags.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "songsee",
+      "category": "media",
+      "frontmatter_name": "songsee",
+      "description": "Audio spectrograms/features (mel, chroma, MFCC) via CLI.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "spotify",
+      "category": "media",
+      "frontmatter_name": "spotify",
+      "description": "Spotify: play, search, queue, manage playlists and devices.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "x-article-content",
+      "category": "media",
+      "frontmatter_name": "x-article-content",
+      "description": "Extract content from X (Twitter) article URLs when login ...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "youtube-content",
+      "category": "media",
+      "frontmatter_name": "youtube-content",
+      "description": "YouTube transcripts to summaries, threads, blogs.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "nama-skill",
+      "category": "nama-skill",
+      "frontmatter_name": "Card Auto-Fill & Generator",
+      "description": "Generates a valid card from a BIN using Luhn algorithm, f...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "hermes",
+      "category": "openclaw",
+      "frontmatter_name": "hermes-crypto-agent",
+      "description": "Multi-chain crypto + Web3 agent toolkit untuk Hermes. Waj...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "review-discipline",
+      "category": "review-discipline",
+      "frontmatter_name": "review-discipline",
+      "description": "Honest technical review of proposals from other agents (C...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "skill-installation-security",
+      "category": "security",
+      "frontmatter_name": "skill-installation-security",
+      "description": "Security rules for skill installation — verify before ins...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "debugging-hermes-tui-commands",
+      "category": "software-development",
+      "frontmatter_name": "debugging-hermes-tui-commands",
+      "description": "Debug Hermes TUI slash commands: Python, gateway, Ink UI.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "hermes-s6-container-supervision",
+      "category": "software-development",
+      "frontmatter_name": "hermes-s6-container-supervision",
+      "description": "Modify, debug, or extend the s6-overlay supervision tree ...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "node-inspect-debugger",
+      "category": "software-development",
+      "frontmatter_name": "node-inspect-debugger",
+      "description": "Debug Node.js via --inspect + Chrome DevTools Protocol CLI.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "plan",
+      "category": "software-development",
+      "frontmatter_name": "plan",
+      "description": "Plan mode: write an actionable markdown plan to .hermes/p...",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "python-debugpy",
+      "category": "software-development",
+      "frontmatter_name": "python-debugpy",
+      "description": "Debug Python: pdb REPL + debugpy remote (DAP).",
+      "platforms": [
+        "linux",
+        "macos"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "requesting-code-review",
+      "category": "software-development",
+      "frontmatter_name": "requesting-code-review",
+      "description": "Pre-commit review: security scan, quality gates, auto-fix.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "spike",
+      "category": "software-development",
+      "frontmatter_name": "spike",
+      "description": "Throwaway experiments to validate an idea before build.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "streaming-platform-builder",
+      "category": "software-development",
+      "frontmatter_name": "streaming-platform-builder",
+      "description": "Build streaming/media platform web apps with TMDB data, v...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "subagent-driven-development",
+      "category": "software-development",
+      "frontmatter_name": "subagent-driven-development",
+      "description": "Execute plans via delegate_task subagents (2-stage review).",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "systematic-debugging",
+      "category": "software-development",
+      "frontmatter_name": "systematic-debugging",
+      "description": "4-phase root cause debugging: understand bugs before fixing.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "test-driven-development",
+      "category": "software-development",
+      "frontmatter_name": "test-driven-development",
+      "description": "TDD: enforce RED-GREEN-REFACTOR, tests before code.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "writing-plans",
+      "category": "software-development",
+      "frontmatter_name": "writing-plans",
+      "description": "Write implementation plans: bite-sized tasks, paths, code.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "superagent",
+      "category": "superagent",
+      "frontmatter_name": "hermes-crypto-agent",
+      "description": "Multi-chain crypto + Web3 agent toolkit untuk Hermes. Waj...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "telegram-bot-management",
+      "category": "telegram",
+      "frontmatter_name": "telegram-bot-management",
+      "description": "Manage Telegram bots via Bot API — set profile photo, upd...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    }
+  ],
+  "category_descriptions": {
+    "autonomous-ai-agents": "Skills for spawning and orchestrating autonomous AI coding agents and multi-agent workflows — running independent agent processes, delegating tasks, and coordinating parallel workstreams.",
+    "creative": "Creative content generation — ASCII art, hand-drawn style diagrams, and visual design tools.",
+    "data-science": "Skills for data science workflows — interactive exploration, Jupyter notebooks, data analysis, and visualization.",
+    "diagramming": "Diagram creation skills for generating visual diagrams, flowcharts, architecture diagrams, and illustrations using tools like Excalidraw.",
+    "domain": "Passive domain reconnaissance using Python stdlib. Use this skill for subdomain discovery, SSL certificate inspection, WHOIS lookups, DNS records, domain availability checks, and bulk multi-domain analysis. No API keys required. Triggers on requests like \"find subdomains\", \"check ssl cert\", \"whois lookup\", \"is this domain available\", \"bulk check these domains\".",
+    "email": "Skills for sending, receiving, searching, and managing email from the terminal.",
+    "gaming": "Skills for setting up, configuring, and managing game servers, modpacks, and gaming-related infrastructure.",
+    "gifs": "Skills for searching, downloading, and working with GIFs and short-form animated media.",
+    "github": "GitHub workflow skills for managing repositories, pull requests, code reviews, issues, and CI/CD pipelines using the gh CLI and git via terminal.",
+    "mcp": "Skills for working with MCP (Model Context Protocol) servers, tools, and integrations. Documents the built-in native MCP client — configure servers in config.yaml for automatic tool discovery.",
+    "media": "Skills for working with media content — YouTube transcripts, GIF search, music generation, and audio visualization.",
+    "mlops": "Knowledge and Tools for Machine Learning Operations - tools and frameworks for training, fine-tuning, deploying, and optimizing ML/AI models",
+    "mlops/evaluation": "Model evaluation benchmarks, experiment tracking, data curation, tokenizers, and interpretability tools.",
+    "mlops/inference": "Model serving, quantization (GGUF/GPTQ), structured output, inference optimization, and model surgery tools for deploying and running LLMs.",
+    "mlops/models": "Specific model architectures and tools — image segmentation (Segment Anything / SAM) and audio generation (AudioCraft / MusicGen). Additional model skills (CLIP, Stable Diffusion, Whisper, LLaVA) are available as optional skills.",
+    "mlops/research": "ML research frameworks for building and optimizing AI systems with declarative programming.",
+    "mlops/training": "Fine-tuning, RLHF/DPO/GRPO training, distributed training frameworks, and optimization tools for training LLMs and other models.",
+    "mlops/vector-databases": "Vector similarity search and embedding databases for RAG, semantic search, and AI application backends.",
+    "note-taking": "Note taking skills, to save information, assist with research, and collab on multi-session planning and information sharing.",
+    "productivity": "Skills for document creation, presentations, spreadsheets, and other productivity workflows.",
+    "productivity/ocr-and-documents": "Skills for extracting text from PDFs, scanned documents, images, and other file formats using OCR and document parsing tools.",
+    "research": "Skills for academic research, paper discovery, literature review, domain reconnaissance, market data, content monitoring, and scientific knowledge retrieval.",
+    "smart-home": "Skills for controlling smart home devices — lights, switches, sensors, and home automation systems.",
+    "social-media": "Skills for interacting with social platforms and social-media workflows — posting, reading, monitoring, and account operations."
+  }
+}

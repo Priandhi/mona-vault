@@ -1,0 +1,9 @@
+{
+  "last_report_path": "/home/ubuntu/.hermes/profiles/yuna/logs/curator/20260624-003513",
+  "last_run_at": "2026-06-24T00:35:13.918767+00:00",
+  "last_run_duration_seconds": 1746.054646,
+  "last_run_summary": "auto: no changes; llm: Now let me write the structured summary.\n\n## Consolidation Pass Summary\n\n**Processed 8 prefix/domain clusters, archived 26 skills (25 consolidated + 1 pruned).**\n\n### Clusters Processed\n\n1. **GitHub Code Review** (3 archives): Merged `reque…\narchived 17 skill(s):\n  • agent-self-update → hermes-agent\n  • codebase-inspection → github-repo-management\n  • codex → claude-code\n  • hermes-multi-profile-setup → hermes-agent\n  • hermes-secret-redaction-workaround → hermes-agent\n  • hermes-web-search-config → hermes-agent\n  • iclix-adult-21-plus-scrapers → streaming-platform-builder\n  • iclix-frontend-design → streaming-platform-builder\n  • mona-emotional-intelligence → mona-command-center\n  • node-inspect-debugger → systematic-debugging\n  … and 7 more\nfull report: hermes curator status\nkeep an umbrella stable: hermes curator pin claude-code",
+  "last_run_summary_shown_at": "2026-06-02T21:17:10.292352+00:00",
+  "paused": false,
+  "run_count": 3
+}
