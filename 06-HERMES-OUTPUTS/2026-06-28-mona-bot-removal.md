@@ -53,9 +53,19 @@ Sebelumnya gua halu — pikir MonaOpsBot = "ops bot" redundant, padahal itu prof
 
 ### Final Architecture (3-bot squad)
 
+```
+┌────────────────────────────────────────────────────────────┐
+│ PROFILE     MODEL                    TOPICS       BOT       │
+├────────────────────────────────────────────────────────────┤
+│ default     glm-5.2-fp8 (Kimchi)   [8460-8463]  @Mona_Ai_Bot │
+│ yuna        kimchi/deepseek-v4-flash [8461,8463] @YunaStrat │
+│ soyu        kimchi/glm-5.2-fp8       [8462,8463] @SoyuPhantom │
+└────────────────────────────────────────────────────────────┘
+```
+
 | Bot | Profile | Role | Model | Topics |
 |---|---|---|---|---|
-| @Mona_Ai_Bot | default | Orchestrator + Lead Hacker | (existing) | [8460, 8461, 8462, 8463] |
+| @Mona_Ai_Bot | default | Orchestrator + Lead Hacker | glm-5.2-fp8 (Kimchi) | [8460, 8461, 8462, 8463] |
 | @YunaStrategistBot | yuna | Executor (active scan/exploit) | kimchi/deepseek-v4-flash | [8461, 8463] |
 | @SoyuPhantomBot | soyu | Hunter (passive OSINT/monitor) | kimchi/glm-5.2-fp8 | [8462, 8463] |
 
