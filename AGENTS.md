@@ -44,8 +44,7 @@
 ├── 04-RESOURCES/       # Reference material, research findings, CTF
 ├── 05-WALLET/          # ⚠️ SENSITIVE — Git-ignored, never push
 ├── 06-HERMES-OUTPUTS/  # Receipts (audit trail) — one per task
-├── 07-KANBAN/          # 5-agent kanban system
-├── 08-ARCHIVE/         # Completed projects, old daily notes
+├── 07-ARCHIVE/         # Completed projects, old daily notes
 └── 09-SYSTEM/          # Templates, canvas, MOCs, dataview queries
 ```
 
@@ -100,24 +99,6 @@
 - **Cloudflared** = public ingress (Tencent SG blocks all inbound ports)
 - **Tunnel URL** = stored in `/tmp/tunnel-watchdog/urls.json` (watcher notifies on change)
 - **Brand colors:** ICLIX red `#e50914`, bg `#000`
-
-## 📋 KANBAN PROTOCOL
-
-> 5-agent system — MONA (architect/coordinator), YUNA (trading), SOYU (sniper), YERIN (mining), HAERI (airdrop/nft)
-
-### Path Kanban:
-- Master : /home/ubuntu/obsidian-vault/07-KANBAN/master-kanban.md
-- YUNA   : /home/ubuntu/obsidian-vault/07-KANBAN/yuna-trading.md
-- SOYU   : /home/ubuntu/obsidian-vault/07-KANBAN/soyu-sniper.md
-- YERIN  : /home/ubuntu/obsidian-vault/07-KANBAN/yerin-mining.md
-- HAERI  : /home/ubuntu/obsidian-vault/07-KANBAN/haeri-airdrop.md
-
-### Rules:
-- Awal session → baca master-kanban.md
-- Task baru → tambah ke BACKLOG kanban agent + master
-- Task mulai → pindah ke IN PROGRESS
-- Task selesai → pindah ke DONE + tulis receipt
-- Selalu update Last Update date di kanban
 
 ## Reminders for Operator
 
