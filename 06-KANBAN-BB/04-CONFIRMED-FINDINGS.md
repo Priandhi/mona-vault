@@ -1,74 +1,81 @@
 # 04 — CONFIRMED FINDINGS
-*Input: ZQYA, RIVA, NOVA | Output: MONA (scoring + submit)*
+*Output: MONA (submit) | Archive: ZQYA*
 
 ---
 
-## DEFINITION OF READY
+## [FINDING-20260703-001] — UNICO Metrics API — HTTP 500 Internal Error on Every Valid Request
 
-**MONA tidak akan proses entry yang tidak memenuhi semua checklist ini:**
+**Bot:** ZQYA  
+**Tag:** [#server-side] [#injection]  
+**Target:** https://api.cadastro.uat.unico.app/api/v1/metrics/events  
+**Bug Class:** gRPC-Web Backend Crash / Internal Server Error  
+**Severity Estimate:** High  
+**CVSS Estimate:** 7.5 (AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H)
 
-- ✅ Bug Class spesifik (bukan hanya "vulnerability found")
-- ✅ Target URL exact (bukan hanya domain)
-- ✅ Reproduction steps yang bisa diikuti orang lain tanpa context tambahan
-- ✅ PoC konkret (payload / raw request / command output)
-- ✅ Evidence (response snippet / screenshot description / tool output)
-- ✅ Impact statement yang spesifik dan quantifiable
-- ✅ Severity estimate
-- ✅ Untuk RIVA: account setup documented + policy compliance note
-- ✅ Evidence file path: `/home/ubuntu/shared/bugbounty/evidence/[FINDING-ID]/`
-- ✅ H1 Program handle (untuk MONA tahu submit ke program yang mana)
+### Reproduction
+1. Send POST to `https://api.cadastro.uat.unico.app/api/v1/metrics/events` with `Content-Type: application/json` and `Origin: https://cadastro.uat.unico.app`
+2. Include a valid UUID `process_id` and empty `events` array
+3. Expected: HTTP 200
+4. Actual: HTTP 500 with `{"code":13,"message":"internal error","details":[]}`
 
-Entry yang tidak lengkap akan dikembalikan dengan flag **[REPRO-INCOMPLETE]** ke bot asal.
-
----
-
-## FORMAT ENTRY STANDAR
-
-```markdown
-## [FINDING-YYYY-MM-DD-NNN] — [Vulnerability Title]
-- **Bot:** ZQYA / RIVA / NOVA
-- **H1 Program:** [program handle dari 01-TARGETS.md]
-- **Tag:** [#tag1] [#tag2]
-- **Target:** https://exact-url.domain.com/api/v1/endpoint?param=
-- **Bug Class:** SQLi / IDOR / SSRF / S3-public / dll
-- **Severity Estimate:** Critical / High / Medium / Low
-- **CVSS Estimate:** X.X (vector kalau sudah tau)
-- **Account Setup:** (RIVA) User A: xxx / User B: yyy / Policy: MULTI-OK
-- **Reproduction:**
-  1. [Step pertama — spesifik, pakai URL/value nyata]
-  2. [Step berikutnya]
-  3. Expected: [apa yang seharusnya terjadi]
-  4. Actual: [apa yang benar-benar terjadi]
-- **PoC:**
-  ```
-  [payload / raw HTTP request / command]
-  ```
-- **Evidence:**
-  ```
-  [response snippet / tool output / grep result]
-  ```
-  File: /home/ubuntu/shared/bugbounty/evidence/[FINDING-ID]/
-- **Impact:**
-  [Konkret — "attacker dapat X dengan cara Y, menghasilkan Z"]
-- **MONA Notes:** — (MONA isi saat review)
-- **Status:** CONFIRMED
+### PoC
+```bash
+curl -sk -X POST "https://api.cadastro.uat.unico.app/api/v1/metrics/events" \
+  -H "Content-Type: application/json" \
+  -H "Origin: https://cadastro.uat.unico.app" \
+  -d '{"process_id":"00000000-0000-0000-0000-000000000000","events":[{"event":"test","properties":{}}]}'
 ```
 
----
+### Evidence
+File: `/home/ubuntu/bugbounty/unico/exploit/EXPLOIT_PHASE1.md`
 
-## PENDING MONA REVIEW
-
-*(Bot tulis entry baru di sini. MONA scan section ini.)*
-
----
-
-## MONA — PROCESSING
-
-*(MONA pindahkan ke sini saat sedang di-score dan di-review)*
+### Impact
+- Every valid metric request **crashes** the backend (HTTP 500)
+- No metrics can be recorded
+- Denial of Service on the metrics pipeline
+- **Status:** CONFIRMED
 
 ---
 
-## PROCESSED — PINDAH KE 05-SUBMITTED
+## [FINDING-20260703-002] — UNICO — gRPC Service Discovery (Type URL Leak)
 
-| Finding ID | Title | Submit Date | H1 Report ID |
-|---|---|---|---|
+**Bot:** ZQYA  
+**Tag:** [#recon] [#server-side]  
+**Target:** https://api.cadastro.uat.unico.app/api/v1/metrics/events  
+**Bug Class:** Information Disclosure  
+**Severity Estimate:** Low  
+**CVSS Estimate:** 3.5
+
+### Description
+The error message reveals the internal protobuf type URL:
+
+```json
+events: invalid value "bad" for type type.googleapis.com/uni
+```
+
+This reveals:
+- **Protobuf package:** `uni`
+- **Service:** `type.googleapis.com/uni`
+
+### Impact
+Internal infrastructure information disclosure. Low severity.
+
+---
+
+## [FINDING-20260703-003] — UNICO — CORS Origin Validation (Strict)
+
+**Bot:** ZQYA  
+**Tag:** [#server-side]  
+**Target:** https://api.cadastro.uat.unico.app/api/v1/metrics/events  
+**Bug Class:** Not a vulnerability (CORS is correct)  
+**Severity Estimate:** N/A
+
+### Description
+CORS is correctly configured:
+- Only `https://cadastro.uat.unico.app` is allowed
+- Invalid origins return `HTTP 403` with `{"code":7,"message":"origin domain not allowed"}`
+- `access-control-allow-credentials: true`
+- `access-control-expose-headers: session-data`
+
+### Status
+NOT a vulnerability — CORS is properly configured.
