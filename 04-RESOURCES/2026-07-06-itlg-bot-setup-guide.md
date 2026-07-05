@@ -19,7 +19,7 @@ Belum lengkap? Baca dulu sampai bawah sebelum mulai.
 ### 1. Akun Interlink Labs
 - Download app Interlink di HP
 - Register pakai email Gmail (aktif)
-- Verify loginId (contoh: `0008811`) + passcode 6 digit (contoh: `030302`)
+- Verify `loginId` (contoh: `1234567`) + passcode 6 digit (contoh: `123456`)
 - Wallet address (EVM) tersambung ke akun (ambil dari app settings)
 
 ### 2. VPS / Server
@@ -34,8 +34,8 @@ Karena OTP Interlink sering masuk folder **Spam**, bot harus baca INBOX + Spam. 
 ### 4. Telegram Bot
 - Bikin bot via @BotFather → ambil token
 - Buat group/forum, add bot jadi admin dengan izin topik
-- Catat chat_id group (contoh: `-1003899936547`)
-- Catat topic_id (forum thread, contoh: `10832`)
+- Catat `chat_id` group (contoh: `-1001234567890`)
+- Catat `topic_id` (forum thread, contoh: `12345`)
 
 ---
 
@@ -67,20 +67,20 @@ Bikin `~/itlg-claim/config.json`:
 
 ```json
 {
-  "loginId": "0008811",
-  "passcode": "030302",
-  "email": "email.kamu@gmail.com",
-  "imapPassword": "abcd efgh ijkl mnop",
-  "deviceId": "3272b692bfa909d9",
-  "tgBotToken": "BOT_TOKEN_DARI_BOTFATHER",
-  "tgChatId": "-1003899936547",
-  "tgThreadId": 10832
+  "loginId": "[ISI_LOGIN_ID_INTERLINK]",
+  "passcode": "[ISI_6_DIGIT_PASSCODE]",
+  "email": "[EMAIL_GMAIL_ADEK]@gmail.com",
+  "imapPassword": "[APP_PASSWORD_16_CHAR_NO_SPACE]",
+  "deviceId": "[GENERATED_HEX_16_CHARS]",
+  "tgBotToken": "[BOT_TOKEN_DARI_BOTFATHER]",
+  "tgChatId": "[-1001234567890]",
+  "tgThreadId": [TOPIC_ID_INT]
 }
 ```
 
 ### Catatan:
-- `deviceId`: string hex random bebas (panjang 16+). Generate: `openssl rand -hex 8`
-- `imapPassword`: Gmail App Password (16 chars, **spasi diabaikan** atau tulis utuh)
+- `deviceId`: hex random 16+ chars. Generate: `openssl rand -hex 8`
+- `imapPassword`: Gmail App Password (16 chars, **spasi diabaikan saja**). Dari https://myaccount.google.com/apppasswords
 - `tgThreadId`: **wajib** kalau group pakai forum topics. Tanpa ini, notif ke group default bukan topik
 - Test bot token: `curl https://api.telegram.org/bot<TOKEN>/getMe`
 
@@ -416,9 +416,10 @@ Kalau gagal, regenerate App Password di https://myaccount.google.com/apppassword
 - Verify bot admin di topik (admin rights > post messages)
 - Test manual:
   ```bash
+  # Ganti chat_id dan message_thread_id punya kamu sendiri
   curl "https://api.telegram.org/bot<TOKEN>/sendMessage" \
-    -d chat_id="-1003899936547" \
-    -d message_thread_id=10832 \
+    -d chat_id="-1001234567890" \
+    -d message_thread_id=12345 \
     -d text="test"
   ```
 
