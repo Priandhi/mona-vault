@@ -25,10 +25,10 @@
 ## Active Projects (refer to /home/ubuntu/obsidian-vault/02-PROJECTS/ for full details)
 
 - **ICLIX** — streaming platform (TMDB en-US, anti-ads HLS player, Movies A-Z)
-- **Owntown Bot** — Solana farming bot for owntown.fun (auto-swap SOL→OTWN)
 - **VPS Mining** — RandomX/Juno Cash CPU mining
 - **21+ Subproject** — adult content scraper (multi-source)
 - **Mona Vault** — this vault system
+- **Bug Bounty** — HackerOne submissions (WOT, Urban Dictionary)
 
 ## VAULT MEMORY PROTOCOL
 
