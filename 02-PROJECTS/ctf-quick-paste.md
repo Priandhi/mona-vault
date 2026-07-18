@@ -1,5 +1,6 @@
 ---
 type: project
+status: archived
 tags:
   - project
   - ctf

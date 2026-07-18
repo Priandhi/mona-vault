@@ -1,6 +1,6 @@
 ---
 type: project
-status: active
+status: settled
 priority: high
 tags:
   - project
@@ -61,11 +61,11 @@ Netflix-style streaming platform. Movies, TV Series, Anime, Drama Asia, Live TV.
 - [x] Add FolaPlay + MaxStream TV to ICLIX — 2026-06-15
 - [x] Live TV frontend integration with FolaPlay — 2026-06-15
 - [x] Embed FolaPlay IN-ICLIX via reverse proxy (no more new tab) — 2026-06-15
-- [ ] ICLIX UI/UX overhaul (P1+P2+P3) — Pending (bundle all fixes)
-- [ ] Integrate VidSrc chain scraper — Pending
-- [ ] Fix folaplay highlight image extraction (lazy-load not captured in headless) — TBD
-- [ ] Build m3u8 extractor for in-modal HLS player — TBD
-- [ ] Add more live sources (Vidio free, RCTI+, etc) — TBD
+- [x] ICLIX UI/UX overhaul (P1+P2+P3) — SETTLED (user dropped)
+- [x] Integrate VidSrc chain scraper — SETTLED (user dropped)
+- [x] Fix folaplay highlight image extraction — SETTLED (user dropped)
+- [x] Build m3u8 extractor — SETTLED (user dropped)
+- [x] Add more live sources — SETTLED (user dropped)
 
 ## Receipts
 - `06-HERMES-OUTPUTS/2026-06-15-mona-iclix-folaplay-maxstream.md` — backend scrapers

@@ -1,6 +1,6 @@
 ---
 type: project
-status: active
+status: archived
 priority: medium
 tags:
   - project
