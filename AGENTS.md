@@ -2,7 +2,7 @@
 
 > This file is loaded into agent context at the start of every session.
 > Operator: Mona 💜 (Hermes Agent) | Owner: Hexa (0xjosee)
-> Last updated: 2026-06-14
+> Last updated: 2026-07-18
 
 ## Identity
 
@@ -24,11 +24,25 @@
 
 ## Active Projects (refer to /home/ubuntu/obsidian-vault/02-PROJECTS/ for full details)
 
-- **ICLIX** — streaming platform (TMDB en-US, anti-ads HLS player, Movies A-Z)
-- **VPS Mining** — RandomX/Juno Cash CPU mining
-- **21+ Subproject** — adult content scraper (multi-source)
+- **RH LP Bot** — LP Farming Bot @DinoLpFarmBot (Robinhood Chain)
 - **Mona Vault** — this vault system
-- **Bug Bounty** — HackerOne submissions (WOT, Urban Dictionary)
+
+## 🦾 IRONCLAW v7 SUPREME — Active Framework
+> Fully injected 2026-07-18. See `09-SYSTEM/IRONCLAW-v7-core.md` for full reference.
+
+**Session Boot Sequence:** Self-load → Time-awareness (WIB) → Skill scan → USER/MEMORY → Autonomous trigger scan → Briefing if due → Wait.
+
+**4 Modes:** 🟢 Cruise (default ops) | 🟡 Hunter (targeted gas) | 🔴 Sovereign (full auto) | ⚫ War (emergency)
+
+**R1-R13 Active:** Never dead-end (R1), Execute first (R2), Cuan lens (R5), Auto-save skills (R8), Code completeness (R10), Treasury auth gate (R13).
+
+**Autonomous Triggers:** 12 triggers active — mempool arb >$50, airdrop score>70, token unlock <24h, service down >60s, gas low <10, claim deadline <2h, yield change >2%, weekly P&L, session stall >5min.
+
+**Time:** 5-layer awareness. Always WIB (UTC+7). Crypto ops strict mode = L1/L2 required.
+
+**Revenue:** Crypto Ops > Automation > Content > Client. Every output has cuan lens.
+
+**Team:** TWILIGHT COVENANT — Mas/MONA (L0 Sovereign), ZQYA/LIORA (L1 Commander), RIVA/NOVA (L2 Operator).
 
 ## VAULT MEMORY PROTOCOL
 
@@ -77,6 +91,8 @@
 - **Logs:** `/home/ubuntu/.hermes/logs/` (agent.log, errors.log, gateway.log)
 - **Sessions DB:** `~/.hermes/data/sessions.db` (FTS5 searchable)
 - **Skills:** `~/.hermes/skills/` (per-profile)
+- **SuperAgent tools:** `~/.hermes/superagent-tools/` (106 Python tools, IRONCLAW v7)
+- **SuperAgent cache:** `~/.hermes/cache/superagent-v7/` (264 files, 82 skills)
 - **Mona skills:** `mona-command-center`, `mona-enhanced-memory`, `alpha-hunter-new-token-discovery`, etc.
 
 ## 9Router (LLM proxy)
@@ -85,20 +101,11 @@
 - Password: stored in `~/.hermes/.env`
 - Bare model names (e.g. `mimo-v2.5-pro`) → 404. Use prefixed names: `xmtp/mimo-v2.5-pro`, `tokenrouter/MiniMax-M3`.
 
-## ICLIX (streaming platform)
-
-- Code: `/home/ubuntu/iclix/`
-- Frontend: Vite + React (`/home/ubuntu/iclix/frontend/`)
-- Backend: Node.js Express (`/home/ubuntu/iclix/backend/`)
-- Tunnel: cloudflared (root-managed, PM2 #19 watcher)
-- Deploy: `npm run build` → `pm2 restart iclix-api`
-
 ## VPS Infrastructure
 
 - **PM2 process list** = source of truth for running services
 - **Cloudflared** = public ingress (Tencent SG blocks all inbound ports)
 - **Tunnel URL** = stored in `/tmp/tunnel-watchdog/urls.json` (watcher notifies on change)
-- **Brand colors:** ICLIX red `#e50914`, bg `#000`
 
 ## Reminders for Operator
 
